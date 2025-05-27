@@ -5,10 +5,7 @@ const Quote = () => {
   return (
     <div className="quote">
       <h1>
-        <FormattedMessage
-          id="home.quote"
-          defaultMessage="...working to create a more equitable restaurant ecosystem for all..."
-        />
+        <FormattedMessage id="home.quote" />
       </h1>
     </div>
   )
