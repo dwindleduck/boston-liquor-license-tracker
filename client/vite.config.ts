@@ -8,7 +8,10 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://vite.dev/config/
 export default defineConfig({
+<<<<<<< HEAD
   base: "/boston-liquor-license-tracker/",
+=======
+>>>>>>> main
   plugins: [
     // Please make sure that '@tanstack/router-plugin' is passed before '@vitejs/plugin-react'
     TanStackRouterVite({ target: "react", autoCodeSplitting: true }),
