@@ -1,5 +1,7 @@
 import PageHeader from "@components/pages/coming-soon/pageheader.tsx";
+import BackToHome from "@components/ui/back-to-home/back-to-home.tsx";
 import { FormattedMessage } from "react-intl";
+import "./coming-soon.css"; 
 
 const ComingSoon = () => {
   return (
@@ -11,7 +13,10 @@ const ComingSoon = () => {
       <PageHeader
         headerTitle={<FormattedMessage id="comingSoon.title" />}
         headerText={<FormattedMessage id="comingSoon.description" />}
-      ></PageHeader>
+      >
+        <BackToHome />
+      </PageHeader>
+      <div className="comingSoon flex flex-col md:items-start md:justify-start w-full w-full pl-3 pr-3  pb-[70px]  md:pt-[200px] md:pb-[144px] md:pl-[64px] gap-[24px]"></div>
     </main>
   );
 };

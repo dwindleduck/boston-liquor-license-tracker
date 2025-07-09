@@ -16,4 +16,8 @@
     .header-text {
         padding-block-end: 2rem;
     }
+
+    .header-children {
+        padding-block-end: 2rem;
+    }
 }

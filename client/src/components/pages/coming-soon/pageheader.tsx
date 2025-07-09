@@ -1,4 +1,4 @@
-import "./pageheader.css"
+import "./pageheader.css";
 
 const PageHeader = ({
   headerTitle,
@@ -14,8 +14,8 @@ const PageHeader = ({
       <div className="text-container">
         <h1 className="header-title">{headerTitle}</h1>
         <p className="header-text">{headerText}</p>
+        <div className="header-children">{children}</div>
       </div>
-      {children}
     </header>
   );
 };
