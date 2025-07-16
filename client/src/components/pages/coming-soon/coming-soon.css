@@ -17,7 +17,7 @@ html, body {
     background:
         url("../../../assets/images/chuttersnap-DOBIZ_sqgXM-unsplash.jpg");
     background-size: cover;
-    /* 保证覆盖整块区域 */
+    /* Ensure coverage of entire area */
     background-position: bottom center;
     /* 背景图像位置在底部中心 */
     /*background-repeat: no-repeat;*/
