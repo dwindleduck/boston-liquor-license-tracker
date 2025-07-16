@@ -5,6 +5,14 @@
 /*    height: auto;*/
 /*}*/
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* 禁止滚动条 */
+}
+
+
 .coming-soon-page {
     background:
         url("../../../assets/images/chuttersnap-DOBIZ_sqgXM-unsplash.jpg");
@@ -13,6 +21,7 @@
     background-position: bottom center;
     /* 背景图像位置在底部中心 */
     /*background-repeat: no-repeat;*/
+
 
 
     width: 100%;
