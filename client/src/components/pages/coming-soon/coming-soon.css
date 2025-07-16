@@ -1,8 +1,29 @@
-.home-page .hero {
-    background:
-        linear-gradient(0deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.45) 100%),
-        url("../../../assets/images/qui-nguyen-Zrp9b3PMIy8-unsplash.jpg") lightgray 0px -613.65px / 100% 408.885% no-repeat;
+/*.coming-soon-image {*/
+/*    display: block;*/
+/*    width: 100vw;*/
+/*    !* fills viewport width *!*/
+/*    height: auto;*/
+/*}*/
 
-    background-position: center;
+.coming-soon-page {
+    background:
+        url("../../../assets/images/chuttersnap-DOBIZ_sqgXM-unsplash.jpg");
     background-size: cover;
+    /* 保证覆盖整块区域 */
+    background-position: bottom center;
+    /* 背景图像位置在底部中心 */
+    /*background-repeat: no-repeat;*/
+
+
+    width: 100%;
+    /* 宽度与视口相同 */
+    height: 100vh;
+    /* 高度与视口相同 */
+    overflow: hidden;
+    /* 禁止内容溢出滚动 */
+
+    margin: 0px;
+    padding: 0px;
+
+    /* fills viewport height */
 }
