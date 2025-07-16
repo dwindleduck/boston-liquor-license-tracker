@@ -24,7 +24,7 @@ html, body {
 
 
     width: 100%;
-    /* 宽度与视口相同 */
+    /* Width same as viewport */
     height: 100vh;
     /* Height same as viewport */
     overflow: hidden;
