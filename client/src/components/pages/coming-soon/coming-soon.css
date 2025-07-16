@@ -28,7 +28,7 @@ html, body {
     height: 100vh;
     /* Height same as viewport */
     overflow: hidden;
-    /* 禁止内容溢出滚动 */
+    /* Prevent content overflow scrolling */
 
     margin: 0px;
     padding: 0px;
