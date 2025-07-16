@@ -26,7 +26,7 @@ html, body {
     width: 100%;
     /* 宽度与视口相同 */
     height: 100vh;
-    /* 高度与视口相同 */
+    /* Height same as viewport */
     overflow: hidden;
     /* 禁止内容溢出滚动 */
 
