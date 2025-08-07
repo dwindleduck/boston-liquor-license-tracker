@@ -1,5 +1,5 @@
 import PageHeader from "@components/pages/coming-soon/pageheader.tsx";
-import BackToHome from "@components/ui/back-to-home/back-to-home.tsx";
+import BackToHome from "@components/ui/back-to-home.tsx";
 import { FormattedMessage } from "react-intl";
 import "./coming-soon.css";
 
