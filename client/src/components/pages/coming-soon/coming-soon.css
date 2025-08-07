@@ -1,11 +1,3 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden; /* Disable scrollbars */
-}
-
-
 .coming-soon-page {
     background:
         url("../../../assets/images/chuttersnap-DOBIZ_sqgXM-unsplash.jpg");
