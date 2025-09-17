@@ -1,18 +1,12 @@
-import { useNavigate } from "@tanstack/react-router";
+import { Link } from "@tanstack/react-router";
 import { FormattedMessage } from "react-intl";
-import backToHomeStyles from "./back-to-home.module.css";
+import backToHomeStyles from "./back-to-home.module.css"
 
 function BackToHome() {
-  const navigate = useNavigate();
-
   return (
-    <button
-      onClick={() => {
-        console.log("Back to Home button clicked");
-        alert("Navigating back to home!");
-        navigate({ to: "/" });
-      }}
-      className={`
+    <Link to="/"  >
+      <button
+        className={`
               flex
               justify-center
               items-center
@@ -33,10 +27,13 @@ function BackToHome() {
               duration-200
               ${backToHomeStyles.backToHome}
             `}
-    >
-      <FormattedMessage id="ui.backToHomeButton" />
-    </button>
-  );
+      >
+        <FormattedMessage
+          id="ui.backToHomeButton"
+        />
+      </button>
+    </Link>
+  )
 }
 
 export default BackToHome;
