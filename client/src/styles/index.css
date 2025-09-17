@@ -21,6 +21,7 @@
 
 /* Semantic names for app usage */
 @theme {
+  --background-light: var(--color-light);
   --color-dark: var(--color-gray-1);
   --color-ui: var(--color-gray-2);
   --color-primary-text: var(--color-white);

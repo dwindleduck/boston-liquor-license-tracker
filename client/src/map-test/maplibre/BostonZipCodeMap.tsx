@@ -9,10 +9,14 @@ const initializeMap = (
   map: RefObject<Map | null>,
   mapContainer: RefObject<HTMLDivElement | null>
 ) => {
-  // Center of Boston
-  const lng = -71.0782;
-  const lat = 42.3164;
+  // // Center of Boston
+  // const lng = -71.0782;
+  // const lat = 42.3164;
   const zoom = 11;
+  const center = {
+    lng: -71.00884880372365,
+    lat: 42.33759424383746,
+  };
 
   const fillColor = getComputedStyle(document.documentElement)
     .getPropertyValue("--color-red")
@@ -26,7 +30,7 @@ const initializeMap = (
       layers: [],
       glyphs: "https://fonts.undpgeohub.org/fonts/{fontstack}/{range}.pbf",
     },
-    center: [lng, lat],
+    center: [center.lng, center.lat],
     zoom: zoom,
   });
 
@@ -76,7 +80,8 @@ const initializeMap = (
     new maplibregl.NavigationControl({
       showZoom: true,
       showCompass: false,
-    })
+    }),
+    "top-left"
   );
 };
 
@@ -89,6 +94,7 @@ const initializeMouseActions = (
 
   map.current.on("click", "boston", (e) => {
     const coordinates = e.lngLat;
+    console.log(coordinates);
     if (map.current) {
       const description = e.features?.[0].properties.ZIP5;
       popup.setLngLat(coordinates).setHTML(description).addTo(map.current);
@@ -159,8 +165,12 @@ export const BostonZipCodeMap = () => {
             needs
           </p>
         </div>
-        <div className="absolute flex flex-row justify-center items-center">
-          <div className="text-lg font-semibold">Filters will go here</div>
+        <div className="absolute flex flex-row justify-center items-center right-0">
+          <div
+            className={`${mapStyles.mapCard} mt-8 mr-8`}
+          >
+            Card
+          </div>
         </div>
         <div className={mapStyles.mapWrap}>
           <div ref={mapContainer} className={mapStyles.map} />
