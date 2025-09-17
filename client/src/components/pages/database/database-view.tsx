@@ -8,12 +8,11 @@ const DatabaseView = () => {
       <h1>Database View</h1>
       <p>This is where the database content will be displayed.</p>
 
-      <FilterDropdown title="License Type" label="License Type MultiSelect"options={[
-    { id: 1, name: 'Option #1' },
-    { id: 2, name: 'Option #2' },
-    { id: 3, name: 'Option #3' },
-    
-  ]}/>
+      <FilterDropdown title="License Type" label="License Type MultiSelect" options={[
+        { id: 1, name: 'Option #1' },
+        { id: 2, name: 'Option #2' },
+        { id: 3, name: 'Option #3' },
+      ]}/>
       {/* PLACEHOLDER */}
       <BreakdownChart
         transferableLicenses={44}
