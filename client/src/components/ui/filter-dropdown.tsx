@@ -52,9 +52,9 @@ const FilterDropdown = ({ title, label, options,  }: FilterDropdownProps) => {
             <span className='bg-[#2e2e2e] w-[.5px] h-[24px]'/>
             <span aria-hidden="true">
               {menuOpen ? 
-                <ExpandLess id="expand-more" style={{ fontSize: 24, color: '#2e2e2e' }} />
+                <ExpandLess style={{ fontSize: 24, color: '#2e2e2e' }} />
               :
-                <ExpandMore id="expand-more" style={{ fontSize: 24, color: '#2e2e2e' }} />
+                <ExpandMore style={{ fontSize: 24, color: '#2e2e2e' }} />
               }
               
             </span>
