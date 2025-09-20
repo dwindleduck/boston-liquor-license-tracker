@@ -1,17 +1,22 @@
 import "maplibre-gl/dist/maplibre-gl.css";
-import { useRef, useEffect, RefObject } from "react";
-import maplibregl, { Map, Popup } from "maplibre-gl";
+import {
+  useRef,
+  useEffect,
+  RefObject,
+  useState,
+  Dispatch,
+  SetStateAction,
+} from "react";
+import maplibregl, { Map } from "maplibre-gl";
 import * as BostonZipCodeGeoJSON from "../../data/boston-zip-codes.json";
 import mapStyles from "./BostonZipCodeMap.module.css";
 import "./mapStyleOverrides.css";
+import { ZipDetailsContent } from "./ZipDetailsContent";
 
 const initializeMap = (
   map: RefObject<Map | null>,
   mapContainer: RefObject<HTMLDivElement | null>
 ) => {
-  // // Center of Boston
-  // const lng = -71.0782;
-  // const lat = 42.3164;
   const zoom = 11;
   const center = {
     lng: -71.00884880372365,
@@ -87,8 +92,8 @@ const initializeMap = (
 
 const initializeMouseActions = (
   map: RefObject<Map | null>,
-  popup: Popup,
-  hoverZipId: RefObject<string | number | undefined>
+  hoverZipId: RefObject<string | number | undefined>,
+  setZipData: Dispatch<SetStateAction<unknown>>
 ) => {
   if (!map.current) return;
 
@@ -97,7 +102,8 @@ const initializeMouseActions = (
     console.log(coordinates);
     if (map.current) {
       const description = e.features?.[0].properties.ZIP5;
-      popup.setLngLat(coordinates).setHTML(description).addTo(map.current);
+      console.log(e.features?.[0].properties);
+      setZipData(description);
     }
   });
 
@@ -137,17 +143,27 @@ const initializeMouseActions = (
 export const BostonZipCodeMap = () => {
   const mapContainer = useRef(null);
   const map = useRef<Map | null>(null);
+  const detailsCard = useRef(null);
   const hoverZipId = useRef<string | number | undefined>("");
+
+  console.log(BostonZipCodeGeoJSON.features);
+  console.log(typeof BostonZipCodeGeoJSON.features);
+
+  const zips = BostonZipCodeGeoJSON.features.map((feature) => {
+    return feature.properties.ZIP5;
+  });
+  const uniqueZips = new Set(zips);
+  console.log({ uniqueZips });
+
+  // setting the type as unknown for now, will update when the data structure is more finalized
+  const [zipData, setZipData] = useState<unknown>();
 
   // Initialize map
   useEffect(() => {
     if (map.current) return; // stops map from intializing more than once
 
-    // Create a popup, but don't add it to the map yet.
-    const popup = new maplibregl.Popup();
-
     initializeMap(map, mapContainer);
-    initializeMouseActions(map, popup, hoverZipId);
+    initializeMouseActions(map, hoverZipId, setZipData);
   }, []);
 
   return (
@@ -168,8 +184,10 @@ export const BostonZipCodeMap = () => {
         <div className="absolute flex flex-row justify-center items-center right-0">
           <div
             className={`${mapStyles.mapCard} mt-8 mr-8`}
+            ref={detailsCard}
+            id="zip-details-card"
           >
-            Card
+            <ZipDetailsContent zipData={zipData} />
           </div>
         </div>
         <div className={mapStyles.mapWrap}>
