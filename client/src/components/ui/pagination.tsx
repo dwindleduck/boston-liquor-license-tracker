@@ -20,7 +20,7 @@ function PaginationArrow({ isDisabled, onClick, children, ...props }: { isDisabl
   )
 }
 
-function Pagination({ currentPage = 4, totalPages = 10, onPageChange }: PaginationProps) {
+function Pagination({ currentPage, totalPages, onPageChange }: PaginationProps) {
 
   const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
 

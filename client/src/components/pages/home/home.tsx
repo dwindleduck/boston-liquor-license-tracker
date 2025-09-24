@@ -5,6 +5,7 @@ import Quote from "@/components/pages/home/quote";
 import AboutUs from "@/components/pages/home/about-us";
 import CaseStudy from "@/components/pages/home/case-study";
 import ExtraWork from "@/components/pages/home/extra-work";
+import Pagination from "@/components/ui/pagination";
 import { useIntl } from "react-intl";
 
 const Home = () => {
