@@ -5,6 +5,7 @@
 :root {
   --color-gray-1: #2e2e2e;
   --color-gray-2: #f2f2f2;
+  --color-gray-3: #eaeaea;
   --color-white: #ffffff;
   --color-red: #b41313;
   --color-light: #fdfdfd;
@@ -23,6 +24,7 @@
 @theme {
   --color-dark: var(--color-gray-1);
   --color-ui: var(--color-gray-2);
+  --color-ui-hover: var(--color-gray-3);
   --color-primary-text: var(--color-white);
   --color-logo: var(--color-red);
   --color-light: var(--color-light);
