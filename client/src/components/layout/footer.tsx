@@ -26,12 +26,6 @@ const Footer = () => {
           <p className={styles.disclaimerText}>
             <FormattedMessage id="footer.disclaimerText" />
           </p>
-
-          <p className={styles.footerNote}>
-            <FormattedMessage id="footer.builtBy" />
-            <br />
-            <FormattedMessage id="footer.copyright" />
-          </p>
         </section>
 
         <nav className={styles.footerColumns} aria-label="Footer Navigation">
@@ -73,7 +67,19 @@ const Footer = () => {
               </li>
             </ul>
           </section>
-        </nav>
+        </nav>       
+
+        <section className={styles.footerBottom}>
+          <a className={styles.switchToDesktopVersion}>
+            <Link to="/"><FormattedMessage id="footer.desktopVersion" /></Link>
+          </a>
+
+          <p className={styles.footerNote}>
+            <FormattedMessage id="footer.builtBy" />
+            <br />
+            <FormattedMessage id="footer.copyright" />
+          </p>
+        </section>
       </div>
     </footer>
   );
