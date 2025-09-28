@@ -31,13 +31,15 @@
 .disclaimerTitle {
     margin-top: 12px;
     margin-bottom: 4px;
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 16px;
+    font-weight: 600;
+    color: #C9C9C9;
 }
 
 .disclaimerText {
-    font-size: 14px;
-    color: #cccccc;
+    font-size: 12px;
+    font-weight: 400;
+    color: #E9E9E9;
     line-height: 1.5;
     max-width: 100%;
 }
@@ -61,7 +63,7 @@
     font-size: 16px;
     color: #C9C9C9;
     font-weight: 300;
-    margin-bottom: 4px;
+    /* margin-bottom: 4px; */
     text-decoration: underline;
 }
 
@@ -72,7 +74,7 @@
 }
 
 .footerSection li {
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 6px;
 }
 
@@ -87,6 +89,7 @@
 
 .footerBottom {
     font-size: 12px;
+    font-weight: 300;
     color: #aaaaaa;
 }
 
