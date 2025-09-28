@@ -85,12 +85,7 @@
     text-decoration: underline;
 }
 
-.switchToDesktopVersion {
-    text-decoration: underline;
-    display: block;
-}
-
-.footerNote {
+.footerBottom {
     font-size: 12px;
     color: #aaaaaa;
 }
@@ -108,9 +103,5 @@
 
     .footerSection {
         max-width: 198px;
-    }
-
-    .switchToDesktopVersion {
-        display: none;
     }
 }

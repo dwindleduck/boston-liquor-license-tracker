@@ -100,13 +100,10 @@ const Footer = () => {
         </nav>       
 
         <section className={styles.footerBottom}>
-          <a className={styles.switchToDesktopVersion}>
-            <Link to="/"><FormattedMessage id="footer.desktopVersion" /></Link>
-          </a>
-
           <p className={styles.footerNote}>
             <FormattedMessage id="footer.builtBy" />
-            <br />
+          </p>
+          <p className={styles.footerCopyright}>
             <FormattedMessage id="footer.copyright" />
           </p>
         </section>
