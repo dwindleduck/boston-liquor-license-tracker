@@ -146,11 +146,11 @@ export const BostonZipCodeMap = () => {
 
   return (
     <>
-      <header className="text-(--color-white) bg-(--color-gray-1) px-10 pt-8 pb-4">
+      <header className="text-(--color-font-light) bg-(--color-background-dark) px-10 pt-8 pb-4">
         <h1 className="text-5xl font-semibold">License Availability Map</h1>
       </header>
       <main>
-        <div className="text-(--color-white) bg-(--color-gray-1) px-10 pb-8">
+        <div className="text-(--color-font-light) bg-(--color-background-dark) px-10 pb-8">
           <p className="max-w-[800px]">
             Use the map to find information about licenses in each of Boston's
             zip codes. Hover over any Zip Code and get instant information about
