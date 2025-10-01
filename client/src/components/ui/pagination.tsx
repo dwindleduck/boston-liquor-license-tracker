@@ -31,7 +31,7 @@ function Pagination({ currentPage, totalPages, onPageChange }: PaginationProps) 
         onClick={() => onPageChange(currentPage - 1)}
       >
         <ChevronLeftIcon sx={{
-          fill: currentPage === 1 ? "var(--color-gray-3)" : "var(--color-gray-1)"
+          fill: currentPage === 1 ? "var(--button-color-hovered-light)" : "var(--background-dark)"
         }} />
       </PaginationArrow>
       {pageNumbers.map((page) => (
@@ -48,7 +48,7 @@ function Pagination({ currentPage, totalPages, onPageChange }: PaginationProps) 
         onClick={() => onPageChange(currentPage + 1)}
       >
         <ChevronRightIcon sx={{
-          fill: currentPage === totalPages ? "var(--color-gray-3)" : "var(--color-gray-1)"
+          fill: currentPage === totalPages ? "var(--button-color-hovered-light)" : "var(--background-dark)"
         }} />
       </PaginationArrow>
     </div>

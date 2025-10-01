@@ -1,7 +1,7 @@
 .pageheader {
-    background-color: var(--color-gray-1);
+    background-color: var(--background-dark);
     box-shadow: 0px 25px 20px 0px rgba(0, 0, 0, 0.45);
-    color: var(--color-white);
+    color: var(--font-color-light);
     padding-inline: 2rem;
 
     .header-title {
