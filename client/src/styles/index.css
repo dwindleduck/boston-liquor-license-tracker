@@ -4,30 +4,24 @@
 
 /* Single source of truth for hex codes */
 :root {
-  /* 
+   /* 
   --color-white-1: #fdfdfd;
   --color-gray-dark-1: #2e2e2e;
   --color-gray-light-1: #f2f2f2;
   --color-gray-light-2: #e2e2e2;
-  --color-white-2: #fdfdfd;
-  --color-gray-dark-2: #2e2e2e;
   --color-gray-light-3: #cccccc;
   --color-gray-light-4: #bfbfbf;
   --color-red-1: #b41313;
   --color-red-2: #a61212;
   --color-red-3: #941010;
-  --color-white-3: #fdfdfd;
-  --color-white-4: #ebebeb;
-  --color-white-5: #bfbfbf;
+  --color-white-2: #ebebeb;
   --color-yellow-1: #f5b524;
   --color-yellow-2: #f6bd3c;
   --color-yellow-3: #db9b0a;
-  --color-white-6: #fdfdfd;
-  --color-white-7: #eaeaea;
-  --color-white-8: #cdcdcd;
-  --color-gray-dark-3: #2e2e2e;
-  --color-gray-dark-4: #383838;
-  --color-gray-dark-5: #404040;
+  --color-white-3: #eaeaea;
+  --color-white-4: #cdcdcd;
+  --color-gray-dark-2: #383838;
+  --color-gray-dark-3: #404040;
   --color-green-1: #168500;
   --color-red-4: #a20000;
   --color-yellow-4: #e9e100;
@@ -55,30 +49,30 @@
 
 /* Semantic names for app usage */
 @theme {
-  /* 
+    /* 
   --background-light: var(--color-white-1);
   --background-dark: var(--color-gray-dark-1);
   --ui-color-gray: var(--color-gray-light-1);
   --border-color: var(--color-gray-light-2);
-  --font-color-light: var(--color-white-2);
-  --font-color-dark: var(--color-gray-dark-2);
+  --font-color-light: var(--color-white-1);
+  --font-color-dark: var(--color-gray-dark-1);
   --font-color-text-links-hover: var(--color-gray-light-3);
   --font-color-text-links-pressed: var(--color-gray-light-4);
   --logo-active-red: var(--color-red-1);
   --logo-hovered-red: var(--color-red-2);
   --logo-pressed-red: var(--color-red-3);
-  --logo-active-white: var(--color-white-3);
-  --logo-hovered-white: var(--color-white-4);
-  --logo-pressed-white: var(--color-white-5);
+  --logo-active-white: var(--color-white-1);
+  --logo-hovered-white: var(--color-white-2);
+  --logo-pressed-white: var(color-gray-light-4);
   --case-study-button-active-yellow: var(--color-yellow-1);
   --case-study-button-hover-yellow: var(--color-yellow-2);
   --case-study-button-pressed-yellow: var(--color-yellow-3);
-  --button-color-active-light: var(--color-white-6);
-  --button-color-hovered-light: var(--color-white-7);
-  --button-color-pressed-light: var(--color-white-8);
-  --button-color-active-dark: var(--color-gray-dark-3);
-  --button-color-hovered-dark: var(--color-gray-dark-4);
-  --button-color-pressed-dark: var(--color-gray-dark-5);
+  --button-color-active-light: var(--color-white-1);
+  --button-color-hovered-light: var(--color-white-3);
+  --button-color-pressed-light: var(--color-white-4);
+  --button-color-active-dark: var(--color-gray-dark-1);
+  --button-color-hovered-dark: var(--color-gray-dark-2);
+  --button-color-pressed-dark: var(--color-gray-dark-3);
   --license-accepted-green: var(--color-green-1);
   --license-expired-red: var(--color-red-4);
   --license-deferred-yellow: var(--color-yellow-4);
