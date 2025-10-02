@@ -40,7 +40,7 @@ const RecentApplicationCard = ({businessName, dbaName, address, licenseNumber, l
             <header className=" font-bold">
                 <h5 className="text-[12px] font-semibold">{businessName}</h5>
             </header>
-            <div className="flex flex-col gap-y-[4px] text-[10px] font-light italic">
+            <div className="flex flex-col gap-y-[4px] text-[10px] font-[var(--font-color-light)] italic">
                 <p>{dbaName}</p>
                 <p>{address}</p>
                 <p>{licenseNumber}</p>
