@@ -14,7 +14,7 @@ function BackToHome() {
         w-[311px]
         px-[24px] py-[8px]
         border-[1px]
-        border-black
+        border-[var(--background-dark)]
         rounded-[8px]
         bg-[var(--button-color-active-light)]
         hover:bg-[var(--button-color-hovered-light)]

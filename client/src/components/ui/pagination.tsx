@@ -38,7 +38,7 @@ function Pagination({ currentPage, totalPages, onPageChange }: PaginationProps) 
         <button
           key={page}
           onClick={() => onPageChange(page)}
-          className={`border border-[2px] h-[32px] w-[32px] cursor-pointer rounded-[4px] ${currentPage === page ? "border-[1px] border-dark bg-[var(--button-color-active-dark)] text-[var(--font-color-light)]" : "border-ui-hover hover:bg-ui-hover"}`}
+          className={`border border-[2px] h-[32px] w-[32px] cursor-pointer rounded-[4px] ${currentPage === page ? "border-[1px] border-[var(--background-dark)] bg-[var(--button-color-active-dark)] text-[var(--font-color-light)]" : "border-ui-hover hover:bg-ui-hover"}`}
         >
           {page}
         </button>
