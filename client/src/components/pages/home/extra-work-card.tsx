@@ -29,7 +29,7 @@ const ExtraWorkCard = ({ item }: ExtraWorkCardProps) => {
         title={intl.formatMessage({ id: item.alt })}
       >
         <p
-          className={`text-[24px] text-shadow-lg font-semibold ${item.textColor === "light" ? "text-black" : "text-white"}`}
+          className={`text-[24px] text-shadow-lg font-semibold ${item.textColor === "light" ? "text-black" : "text-[var(--font-color-light)]"}`}
         >
           {item.title}
         </p>

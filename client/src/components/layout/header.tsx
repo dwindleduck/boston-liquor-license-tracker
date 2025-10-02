@@ -67,7 +67,7 @@ const Header = () => {
             <div className="absolute right-6 top-1/2 -translate-y-1/2 flex items-center">
               <img
                 src={language}
-                className={"inline-block size-[20px] text-white me-2"}
+                className={"inline-block size-[20px] text-[var(--font-color-light)] me-2"}
                 alt={intl.formatMessage({ id: "header.language" })}
               />
               <LangSwitcher />
@@ -85,7 +85,7 @@ const Header = () => {
       </div>
 
       {isOpen && (
-        <nav className="md:hidden px-4 bg-[var(--button-color-active-dark)]">
+        <nav className="md:hidden px-4 bg-[var(--background-dark)]">
           <Link to="/maps" className="py-[8px] px-[24px] block">
             <FormattedMessage id="header.maps" />
           </Link>
@@ -100,7 +100,7 @@ const Header = () => {
           <div className="py-[16px] px-[24px] pb-[8px] ms-auto">
             <img
               src={language}
-              className={"inline-block size-[20px] text-white me-2"}
+              className={"inline-block size-[20px] text-[var(--font-color-light)] me-2"}
               alt={intl.formatMessage({ id: "header.language" })}
             />
             <LangSwitcher />

@@ -16,12 +16,12 @@ function BackToHome() {
         border-[1px]
         border-black
         rounded-[8px]
-        bg-light
-        hover:bg-[#EAEAEA]
-        active:bg-[#CDCDCD]
-        !text-dark
-        !hover:text-[#383838]
-        !active:text-[#404040]
+        bg-[var(--button-color-active-light)]
+        hover:bg-[var(--button-color-hovered-light)]
+        active:bg-[--button-color-pressed-light]
+        !text-[var(--font-color-dark)]
+        !hover:text-[var(--button-color-hovered-dark)]
+        !active:text-[var(--button-color-pressed-dark)]
         font-bold
         transition-all
         duration-200

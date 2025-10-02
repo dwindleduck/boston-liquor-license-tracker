@@ -11,7 +11,7 @@ function PaginationArrow({ isDisabled, onClick, children, ...props }: { isDisabl
   return (
     <button
       disabled={isDisabled}
-      className={`flex justify-center items-center h-[32px] w-[32px] border-[2px] border-ui-hover rounded-[4px] bg-light cursor-pointer disabled:cursor-not-allowed ${!isDisabled ? "hover:bg-ui-hover" : ""}`}
+      className={`flex justify-center items-center h-[32px] w-[32px] border-[2px] border-ui-hover rounded-[4px] bg-[var(--background-light)] cursor-pointer disabled:cursor-not-allowed ${!isDisabled ? "hover:bg-ui-hover" : ""}`}
       onClick={onClick}
       {...props}
     >
@@ -38,7 +38,7 @@ function Pagination({ currentPage, totalPages, onPageChange }: PaginationProps) 
         <button
           key={page}
           onClick={() => onPageChange(page)}
-          className={`border border-[2px] h-[32px] w-[32px] cursor-pointer rounded-[4px] ${currentPage === page ? "border-[1px] border-dark bg-[var(--button-color-active-dark)] text-white" : "border-ui-hover hover:bg-ui-hover"}`}
+          className={`border border-[2px] h-[32px] w-[32px] cursor-pointer rounded-[4px] ${currentPage === page ? "border-[1px] border-dark bg-[var(--button-color-active-dark)] text-[var(--font-color-light)]" : "border-ui-hover hover:bg-ui-hover"}`}
         >
           {page}
         </button>

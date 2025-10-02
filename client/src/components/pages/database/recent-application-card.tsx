@@ -32,8 +32,8 @@ const RecentApplicationCard = ({businessName, dbaName, address, licenseNumber, l
             box-content
             px-[16px]
             py-[8px]
-            bg-ui 
-            text-dark
+            bg-[var(--ui-color-gray)] 
+            text-[var(--font-color-dark)]
             rounded-[8px] 
             shadow-[2px_2px_4px_0px_rgba(0,0,0,0.25)]"
         >

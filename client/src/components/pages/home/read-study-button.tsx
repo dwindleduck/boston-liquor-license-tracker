@@ -18,7 +18,7 @@ const ReadStudyButton = ({ to, messageId }: ReadStudyButtonProps) => {
                 bg-case-study
                 hover:bg-[#F6BD3C]
                 active:bg-[#DB9B0A]
-                text-dark
+                text-[var(--font-color-dark)]
                 hover:text-[#333333]
                 active:text-[#212121]
                 font-bold
