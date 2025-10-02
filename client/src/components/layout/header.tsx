@@ -32,7 +32,7 @@ const Header = () => {
 
   return (
     <header
-      className={`${styles.siteHeader} bg-dark shadow-md sticky top-0 left-0 w-full z-50`}
+      className={`${styles.siteHeader} bg-[var(--button-color-active-dark)] shadow-md sticky top-0 left-0 w-full z-50`}
     >
       <div className="flex max-w-7xl sm:px-[24px] py-[18px] md:p-6 lg:items-center text-center">
         <nav className="flex w-full items-center">
@@ -85,7 +85,7 @@ const Header = () => {
       </div>
 
       {isOpen && (
-        <nav className="md:hidden px-4 bg-dark">
+        <nav className="md:hidden px-4 bg-[var(--button-color-active-dark)]">
           <Link to="/maps" className="py-[8px] px-[24px] block">
             <FormattedMessage id="header.maps" />
           </Link>

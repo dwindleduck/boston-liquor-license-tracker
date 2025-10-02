@@ -1,8 +1,3 @@
-.navigation button {
-    background-color: var(--button-color-active-dark);
-    color: var(--font-color-light);
-  }
-
 @media only screen and (max-width: 450px) {
   .navigation {
     display: block;
