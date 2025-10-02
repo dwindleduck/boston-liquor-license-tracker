@@ -32,32 +32,32 @@
 
 /* Semantic names for app usage */
 @theme {
-  --background-light: var(--color-white-1);
-  --background-dark: var(--color-gray-dark-1);
-  --ui-color-gray: var(--color-gray-light-1);
-  --border-color: var(--color-gray-light-2);
-  --font-color-light: var(--color-white-1);
-  --font-color-dark: var(--color-gray-dark-1);
-  --font-color-text-links-hover: var(--color-gray-light-3);
-  --font-color-text-links-pressed: var(--color-gray-light-4);
-  --logo-active-red: var(--color-red-1);
-  --logo-hovered-red: var(--color-red-2);
-  --logo-pressed-red: var(--color-red-3);
-  --logo-active-white: var(--color-white-1);
-  --logo-hovered-white: var(--color-white-2);
-  --logo-pressed-white: var(--color-gray-light-4);
-  --case-study-button-active-yellow: var(--color-yellow-1);
-  --case-study-button-hover-yellow: var(--color-yellow-2);
-  --case-study-button-pressed-yellow: var(--color-yellow-3);
-  --button-color-active-light: var(--color-white-1);
-  --button-color-hovered-light: var(--color-white-3);
-  --button-color-pressed-light: var(--color-white-4);
-  --button-color-active-dark: var(--color-gray-dark-1);
-  --button-color-hovered-dark: var(--color-gray-dark-2);
-  --button-color-pressed-dark: var(--color-gray-dark-3);
-  --license-accepted-green: var(--color-green-1);
-  --license-expired-red: var(--color-red-4);
-  --license-deferred-yellow: var(--color-yellow-4);
+  --color-background-light: var(--color-white-1);
+  --color-background-dark: var(--color-gray-dark-1);
+  --color-ui-gray: var(--color-gray-light-1);
+  --color-border-gray: var(--color-gray-light-2);
+  --color-font-light: var(--color-white-1);
+  --color-font-dark: var(--color-gray-dark-1);
+  --color-font-text-links-hover: var(--color-gray-light-3);
+  --color-color-font-text-links-pressed: var(--color-gray-light-4);
+  --color-logo-active-red: var(--color-red-1);
+  --color-logo-hovered-red: var(--color-red-2);
+  --color-logo-pressed-red: var(--color-red-3);
+  --color-logo-active-white: var(--color-white-1);
+  --color-logo-hovered-white: var(--color-white-2);
+  --color-logo-pressed-white: var(--color-gray-light-4);
+  --color-case-study-button-active-yellow: var(--color-yellow-1);
+  --color-case-study-button-hover-yellow: var(--color-yellow-2);
+  --color-case-study-button-pressed-yellow: var(--color-yellow-3);
+  --color-button-active-light: var(--color-white-1);
+  --color-button-hovered-light: var(--color-white-3);
+  --color-button-pressed-light: var(--color-white-4);
+  --color-button-active-dark: var(--color-gray-dark-1);
+  --color-button-hovered-dark: var(--color-gray-dark-2);
+  --color-button-pressed-dark: var(--color-gray-dark-3);
+  --color-license-accepted-green: var(--color-green-1);
+  --color-license-expired-red: var(--color-red-4);
+  --color-license-deferred-yellow: var(--color-yellow-4);
 }
 
 

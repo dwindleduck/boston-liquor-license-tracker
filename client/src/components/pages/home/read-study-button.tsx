@@ -15,12 +15,12 @@ const ReadStudyButton = ({ to, messageId }: ReadStudyButtonProps) => {
                 inline-flex
                 justify-center
                 items-center
-                bg-[var(--case-study-button-active-yellow)]
-                hover:bg-[var(--case-study-button-hover-yellow)]
-                active:bg-[var(--case-study-button-pressed-yellow)]
-                text-[var(--font-color-dark)]
-                hover:text-[var(--button-color-pressed-dark)]
-                active:text-[--button-color-hovered-dark]
+                bg-case-study-button-active-yellow
+                hover:bg-case-study-button-hover-yellow
+                active:bg-case-study-button-pressed-yellow
+                text-font-dark
+                hover:text-button-pressed-dark
+                active:text-[--color-button-hovered-dark]
                 font-bold
                 px-8
                 py-4

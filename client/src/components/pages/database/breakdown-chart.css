@@ -3,7 +3,7 @@
     width: 640px;
     border-collapse: collapse;
     font-family: sans-serif;
-    background:var(--background-dark);
+    background:var(--color-background-dark);
     border-radius: 4px;
     margin-top: 1rem; 
   }
@@ -13,9 +13,9 @@
     padding: 8px 16px;
     font-weight: normal;
     font-style: italic;
-    background-color:var(--background-dark);
-    color: var(--font-color-light);
-    border-bottom: 1px solid var(--background-dark);
+    background-color:var(--color-background-dark);
+    color: var(--color-font-light);
+    border-bottom: 1px solid var(--color-background-dark);
     text-align: left;
   }
 
@@ -39,10 +39,10 @@
 
   /* Alternating row background colors */
   .breakdown-chart tbody tr:nth-child(odd) {
-    background-color: var(--background-light);
+    background-color: var(--color-background-light);
   }
 
   .breakdown-chart tbody tr:nth-child(even) {
-    background-color: var(--ui-color-gray);
+    background-color: var(--color-ui-gray);
   }
 }

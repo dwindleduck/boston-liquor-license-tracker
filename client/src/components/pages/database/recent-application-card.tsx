@@ -14,9 +14,9 @@ interface RecentApplicationCardProps {
 }
 
 const statusIconMap = {
-    approved: {icon: statusApprovedIcon, bgColor: "bg-[var(--license-accepted-green)]"},
-    pending: {icon: statusPendingIcon, bgColor: "bg-[var(--license-deferred-yellow)]"},
-    denied: {icon: statusDeniedIcon, bgColor: "bg-[var(--license-expired-red)]"},
+    approved: {icon: statusApprovedIcon, bgColor: "bg-license-accepted-green"},
+    pending: {icon: statusPendingIcon, bgColor: "bg-license-deferred-yellow"},
+    denied: {icon: statusDeniedIcon, bgColor: "bg-license-expired-red"},
 }
 
 const RecentApplicationCard = ({businessName, dbaName, address, licenseNumber, licenseType, applicationDate, status}: RecentApplicationCardProps) => {
@@ -32,15 +32,15 @@ const RecentApplicationCard = ({businessName, dbaName, address, licenseNumber, l
             box-content
             px-[16px]
             py-[8px]
-            bg-[var(--ui-color-gray)] 
-            text-[var(--font-color-dark)]
+            bg-ui-gray 
+            text-font-dark
             rounded-[8px] 
             shadow-[2px_2px_4px_0px_rgba(0,0,0,0.25)]"
         >
             <header className=" font-bold">
                 <h5 className="text-[12px] font-semibold">{businessName}</h5>
             </header>
-            <div className="flex flex-col gap-y-[4px] text-[10px] font-[var(--font-color-light)] italic">
+            <div className="flex flex-col gap-y-[4px] text-[10px] font-font-light italic">
                 <p>{dbaName}</p>
                 <p>{address}</p>
                 <p>{licenseNumber}</p>

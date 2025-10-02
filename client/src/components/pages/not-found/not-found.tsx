@@ -12,11 +12,11 @@ const NotFound = () => {
       <title>{title}</title>
       <div className={notFoundStyles.notFoundContent}>
         <div className="not-found-heading">
-          <h2 className="text-[var(--font-color-light)] text-2xl md:text-3xl lg:text-5xl w-full font-bold">
+          <h2 className="text-font-light text-2xl md:text-3xl lg:text-5xl w-full font-bold">
             <FormattedMessage id="notFound.heading" />
           </h2>
           <br />
-          <p className="text-[var(--font-color-light)]">
+          <p className="text-font-light">
             <FormattedMessage id="notFound.message" />
           </p>
           <br />

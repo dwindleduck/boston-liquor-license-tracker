@@ -17,8 +17,8 @@ const NavigationButton = ({ to, messageId }: NavigationButtonProps) => {
                 w-[400px] h-[62px]
                 px-[24px] py-[12px]
                 rounded-[8px]
-                bg-[var(--button-color-active-dark)] hover:bg-[var(--button-color-hovered-dark)] active:bg-[var(--button-color-pressed-dark)]
-                text-[var(--button-color-active-light)] hover:text-[var(--button-color-hovered-light)] active:text-[var(--button-color-pressed-light)]
+                bg-button-active-dark hover:bg-button-hovered-dark active:bg-button-pressed-dark
+                text-button-active-light hover:text-button-hovered-light active:text-button-pressed-light
                 text-[32px] font-normal
                 cursor-pointer
             "
