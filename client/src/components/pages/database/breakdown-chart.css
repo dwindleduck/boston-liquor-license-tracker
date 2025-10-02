@@ -15,7 +15,7 @@
     font-style: italic;
     background-color:var(--background-dark);
     color: var(--font-color-light);
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid var(--background-dark);
     text-align: left;
   }
 

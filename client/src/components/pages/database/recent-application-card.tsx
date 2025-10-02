@@ -14,9 +14,9 @@ interface RecentApplicationCardProps {
 }
 
 const statusIconMap = {
-    approved: {icon: statusApprovedIcon, bgColor: "bg-[#46C800]"},
-    pending: {icon: statusPendingIcon, bgColor: "bg-[#FFF714]"},
-    denied: {icon: statusDeniedIcon, bgColor: "bg-[#FF1111]"},
+    approved: {icon: statusApprovedIcon, bgColor: "bg-[var(--license-accepted-green)]"},
+    pending: {icon: statusPendingIcon, bgColor: "bg-[var(--license-deferred-yellow)]"},
+    denied: {icon: statusDeniedIcon, bgColor: "bg-[var(--license-expired-red)]"},
 }
 
 const RecentApplicationCard = ({businessName, dbaName, address, licenseNumber, licenseType, applicationDate, status}: RecentApplicationCardProps) => {

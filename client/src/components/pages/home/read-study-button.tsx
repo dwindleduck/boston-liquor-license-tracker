@@ -16,11 +16,11 @@ const ReadStudyButton = ({ to, messageId }: ReadStudyButtonProps) => {
                 justify-center
                 items-center
                 bg-case-study
-                hover:bg-[#F6BD3C]
-                active:bg-[#DB9B0A]
+                hover:bg-[var(--case-study-button-hover-yellow)]
+                active:bg-[var(--case-study-button-pressed-yellow)]
                 text-[var(--font-color-dark)]
-                hover:text-[#333333]
-                active:text-[#212121]
+                hover:text-[var(--button-color-pressed-dark)]
+                active:text-[--button-color-hovered-dark]
                 font-bold
                 px-8
                 py-4
