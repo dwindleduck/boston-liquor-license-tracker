@@ -16,7 +16,7 @@ function BackToHome() {
         border-[1px]
         border-background-dark
         rounded-[8px]
-        bg-button-active-light
+        bg-button-default-light
         hover:bg-button-hovered-light
         active:bg-button-pressed-light
         !text-font-dark

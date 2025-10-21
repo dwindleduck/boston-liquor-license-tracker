@@ -49,7 +49,7 @@
   --color-case-study-button-default-yellow: var(--color-yellow-1);
   --color-case-study-button-hover-yellow: var(--color-yellow-2);
   --color-case-study-button-active-yellow: var(--color-yellow-3);
-  --color-button-active-light: var(--color-white-1);
+  --color-button-default-light: var(--color-white-1);
   --color-button-hovered-light: var(--color-white-3);
   --color-button-pressed-light: var(--color-white-4);
   --color-button-active-dark: var(--color-gray-dark-1);
