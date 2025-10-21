@@ -15,7 +15,7 @@ const ReadStudyButton = ({ to, messageId }: ReadStudyButtonProps) => {
                 inline-flex
                 justify-center
                 items-center
-                bg-case-study-button-active-yellow
+                bg-case-study-button-default-yellow
                 hover:bg-case-study-button-hover-yellow
                 active:bg-case-study-button-pressed-yellow
                 text-font-dark

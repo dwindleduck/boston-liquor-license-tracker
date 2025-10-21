@@ -46,7 +46,7 @@
   --color-logo-default-white: var(--color-white-1);
   --color-logo-hovered-white: var(--color-white-2);
   --color-logo-active-white: var(--color-gray-light-4);
-  --color-case-study-button-active-yellow: var(--color-yellow-1);
+  --color-case-study-button-default-yellow: var(--color-yellow-1);
   --color-case-study-button-hover-yellow: var(--color-yellow-2);
   --color-case-study-button-pressed-yellow: var(--color-yellow-3);
   --color-button-active-light: var(--color-white-1);
