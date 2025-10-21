@@ -31,14 +31,14 @@ function Pagination({ currentPage, totalPages, onPageChange }: PaginationProps) 
         onClick={() => onPageChange(currentPage - 1)}
       >
         <ChevronLeftIcon sx={{
-          fill: currentPage === 1 ? "var(--color-button-hovered-light)" : "var(--color-button-active-dark)"
+          fill: currentPage === 1 ? "var(--color-button-hovered-light)" : "var(--color-button-default-dark)"
         }} />
       </PaginationArrow>
       {pageNumbers.map((page) => (
         <button
           key={page}
           onClick={() => onPageChange(page)}
-          className={`border border-[2px] h-[32px] w-[32px] cursor-pointer rounded-[4px] ${currentPage === page ? "border-[1px] border-background-dark bg-button-active-dark text-font-light" : "border-button-hovered-light hover:bg-button-hovered-light"}`}
+          className={`border border-[2px] h-[32px] w-[32px] cursor-pointer rounded-[4px] ${currentPage === page ? "border-[1px] border-background-dark bg-button-default-dark text-font-light" : "border-button-hovered-light hover:bg-button-hovered-light"}`}
         >
           {page}
         </button>
@@ -48,7 +48,7 @@ function Pagination({ currentPage, totalPages, onPageChange }: PaginationProps) 
         onClick={() => onPageChange(currentPage + 1)}
       >
         <ChevronRightIcon sx={{
-          fill: currentPage === totalPages ? "var(--color-button-hovered-light)" : "var(--color-button-active-dark)"
+          fill: currentPage === totalPages ? "var(--color-button-hovered-light)" : "var(--color-button-default-dark)"
         }} />
       </PaginationArrow>
     </div>

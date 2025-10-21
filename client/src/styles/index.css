@@ -52,7 +52,7 @@
   --color-button-default-light: var(--color-white-1);
   --color-button-hovered-light: var(--color-white-3);
   --color-button-active-light: var(--color-white-4);
-  --color-button-active-dark: var(--color-gray-dark-1);
+  --color-button-default-dark: var(--color-gray-dark-1);
   --color-button-hovered-dark: var(--color-gray-dark-2);
   --color-button-pressed-dark: var(--color-gray-dark-3);
   --color-license-accepted-green: var(--color-green-1);

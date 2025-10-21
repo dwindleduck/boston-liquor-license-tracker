@@ -32,7 +32,7 @@ const Header = () => {
 
   return (
     <header
-      className={`${styles.siteHeader} bg-button-active-dark shadow-md sticky top-0 left-0 w-full z-50`}
+      className={`${styles.siteHeader} bg-button-default-dark shadow-md sticky top-0 left-0 w-full z-50`}
     >
       <div className="flex max-w-7xl sm:px-[24px] py-[18px] md:p-6 lg:items-center text-center">
         <nav className="flex w-full items-center">
