@@ -21,7 +21,7 @@ function BackToHome() {
         active:bg-button-active-light
         !text-font-dark
         !hover:text-button-hovered-dark
-        !active:text-button-pressed-dark
+        !active:text-button-active-dark
         font-bold
         transition-all
         duration-200
