@@ -40,7 +40,7 @@
   --color-font-dark: var(--color-gray-dark-1);
   --color-font-text-links-hover: var(--color-gray-light-3);
   --color-font-text-links-active: var(--color-gray-light-4);
-  --color-logo-active-red: var(--color-red-1);
+  --color-logo-default-red: var(--color-red-1);
   --color-logo-hovered-red: var(--color-red-2);
   --color-logo-pressed-red: var(--color-red-3);
   --color-logo-active-white: var(--color-white-1);
