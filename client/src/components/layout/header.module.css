@@ -16,7 +16,7 @@
 
 
 a:visited {
-  color: var(--font-text-links-pressed);
+  color: var(--font-text-links-active);
 }
 
 a:hover {
