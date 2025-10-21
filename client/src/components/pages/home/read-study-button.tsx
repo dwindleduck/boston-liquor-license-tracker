@@ -17,7 +17,7 @@ const ReadStudyButton = ({ to, messageId }: ReadStudyButtonProps) => {
                 items-center
                 bg-case-study-button-default-yellow
                 hover:bg-case-study-button-hover-yellow
-                active:bg-case-study-button-pressed-yellow
+                active:bg-case-study-button-active-yellow
                 text-font-dark
                 hover:text-button-pressed-dark
                 active:text-[--color-button-hovered-dark]
