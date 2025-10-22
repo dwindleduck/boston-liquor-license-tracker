@@ -1,0 +1,92 @@
+{
+  "header.logo-altText": "License to Succeed Logo",
+  "header.language": "语言",
+
+
+  "footer.abcc": "酒精饮料控制委员会（Alcoholic Beverages Control Commission）",
+  "footer.analyzeBoston": "分析波士顿",
+  "footer.application": "波士顿许可证申请",
+  "footer.bootcamp": "Bar Management Bootcamp",
+  "footer.bostonBoard": "波士顿许可委员会（Boston Licensing Board）",
+  "footer.builtBy": "由 Code for Boston 为 Offsite Hospitality 构建",
+  "footer.codeForBoston": "Code for Boston",
+  "footer.copyright": "© OFFSITE LLC 保留所有权利",
+  "footer.database": "数据库",
+  "footer.disclaimerText": "本网站所提供的信息仅供一般参考之用。本站所展示的数据不保证其准确性或完整性，相关信息可能会在未提前通知的情况下发生变更。",
+  "footer.disclaimerTitle": "免责声明:",
+  "footer.homepage": "首页",
+  "footer.importantLinks": "重要链接",
+  "footer.map": "地图",
+  "footer.moreFromUs": "更多来自我们的内容",
+  "footer.offsite": "Offsite Hospitality",
+  "footer.resources": "重要资源",
+  "footer.siteMap": "网站地图",
+
+
+  "shared.backToHomeButton": "返回首页",
+  "shared.database.capitalized": "许可证数据库",
+  "shared.map.capitalized": "地图",
+  "shared.resources.capitalized": "许可资源",
+
+
+  "comingSoon.backgroundImageAlt": "悬挂酒杯、待用的酒杯架",
+  "comingSoon.description": "我们正在努力完善此页面，以更好地满足您的需求。敬请期待更多精彩内容！",
+  "comingSoon.pageTitle": "即将推出",
+  "comingSoon.title": "请耐心等待！",
+
+
+  "database.header.description": "按波士顿各邮编区域浏览可申请的酒类许可，查看近期的许可申请动态，以及各许可类型的关键信息与申请的重要日期。",
+  "database.header.nextMeeting": "下次许可委员会会议时间为：<strong>{nextMeetingDate, date, long}</strong>",
+  "database.header.title": "许可证数据库",
+
+  "database.licenseTerminology.title": null,
+  "database.licenseTerminology.description": null,
+  "database.licenseTerminology.allAlcohol.title": null,
+  "database.licenseTerminology.allAlcohol.description": null,
+  "database.licenseTerminology.beerAndWine.title": null,
+  "database.licenseTerminology.beerAndWine.description": null,
+  "database.licenseTerminology.nonTransferable.title": null,
+  "database.licenseTerminology.nonTransferable.description": null,
+  "database.licenseTerminology.transferable.title": null,
+  "database.licenseTerminology.transferable.description": null,
+
+  "database.pageTitle": "许可证数据库",
+  "database.subheader.description": "选择下面的邮政编码以查看每个区域可用的许可证。使用过滤器缩小或扩大搜索范围，以满足您的确切业务需求。",
+  "database.subheader.title": "许可证可用性查询:",
+  "database.table.legend": "表格图例",
+
+
+  "home.aboutUs.title": "我们是谁:",
+  "home.aboutUs.weAre": "我们是一群餐厅老板、调酒师、主厨和顾客；<b>就像您一样</b>。我们深知，在波士顿处理酒类许可的繁文缛节有多难，尤其是对新来者而言。{br}从关注申请名额、了解申请流程，到留意取得许可的潜在隐性成本——需要关注的事项很多。我们以让流程透明易懂为使命，并尽可能无痛地帮助您的业务顺利起步。",
+  "home.caseStudy.button.read": "阅读完整案例研究",
+  "home.caseStudy.image.alt": "中等大小的空白白色方块",
+  "home.caseStudy.part1": "在波士顿，获得酒类许可证长期以来意味着必须加入一个由餐厅老板、酒店餐饮公司和熟悉流程的律师组成的“内部圈子”。这种人为稀缺的许可制度使得新进入者历来难以获得许可证，也导致全市多个社区出现了“酒牌荒”。而这种现象往往出现在传统上非白人居民比例较高、文化更为多元的社区中。",
+  "home.caseStudy.part2": "波士顿近期对酒类许可制度的改革，开始改善获取酒类许可证的途径。2024年通过的一项新法规为部分社区设立了专属酒类许可证，让本地创业者更有机会开设餐厅和酒吧。但这仅仅是开始——目前要追踪可申请的酒类许可证依旧复杂，对许多波士顿社区来说仍然难以触及。",
+  "home.caseStudy.part3": "通过这个网站，我们致力于为所有人创造一个更公平的餐饮生态系统，让每个人都能方便地了解并追踪可供申请的各类酒类许可证。",
+  "home.caseStudy.title": "这为什么重要?",
+  "home.extraWork.title": "了解我们更多的工作!",
+  "home.extraWork.altText.barManagementBootcamp": "数名学生围坐在酒吧周围，听取训练营讲师的讲解",
+  "home.extraWork.altText.codeForBoston": "Code for Boston的Logo，几何灯笼形状，代码括号代替灯光，旁边有\"Code for Boston\"的文字",
+  "home.extraWork.altTest.offsite": "Off Site的Logo，简单的Logo类型，采用粗体无衬线字体",
+  "home.hero.heading": "波士顿的酒类许可制度可能令人困惑。我们将协助您顺利应对相关流程，确保您的业务取得成功。",
+  "home.hero.photoCredit": "照片由{photographerLink}提供，发布于{platformLink}",
+  "home.hero.title": "高档酒吧，采用复古工业风灯泡装饰",
+  "home.navigation.database": "许可证数据库",
+  "home.navigation.map": "地图",
+  "home.pageTitle": "License to Succeed",
+  "home.quote": "...致力于为所有人打造一个更加公正包容的餐饮行业生态...",
+
+
+  "map.header.text": null,
+  "map.header.title": null,
+  "map.pageTitle": "地图",
+
+
+  "notFound.beerPourImageAlt": "调酒师从啤酒龙头倒啤酒",
+  "notFound.heading": "此页面目前无法访问",
+  "notFound.message": "您要找的页面不存在或已移动，请确保您输入了正确的网址",
+  "notFound.pageTitle": "未找到页面",
+
+
+  "resources.pageTitle": "许可资源"
+}

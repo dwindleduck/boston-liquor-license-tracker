@@ -1,7 +1,7 @@
 import "./database.module.css";
 import Header from "./header";
 import SubHeader from "./subheader";
-import DatabaseView from "./database-view";
+import LicenseAvailabilityTable from "./license-availability-table";
 import LicenseType from "./license-type";
 import { useIntl } from "react-intl";
 
@@ -13,7 +13,7 @@ const Database = () => {
       <title>{title}</title>
       <Header />
       <SubHeader />
-      <DatabaseView />
+      <LicenseAvailabilityTable />
       <LicenseType />
     </main>
   );
