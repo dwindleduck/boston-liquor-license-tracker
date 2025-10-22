@@ -1,5 +1,5 @@
 import navigationStyles from "./navigation.module.css"
-import NavigationButton from './navigation-button';
+import NavigationButton from "./navigation-button";
 
 const Navigation = () => {
   return (
@@ -13,9 +13,9 @@ const Navigation = () => {
         gap-[56px] last:mb-0
       `}
     >
-      <NavigationButton to='/maps' messageId='navigation.maps'/>
-      <NavigationButton to='/database' messageId='navigation.database'/>
-      <NavigationButton to='/resources' messageId='navigation.resources'/>
+      <NavigationButton to="/maps" messageId="shared.map.capitalized"/>
+      <NavigationButton to="/database" messageId="shared.database.capitalized"/>
+      <NavigationButton to="/resources" messageId="shared.resources.capitalized"/>
     </div>
   );
 };
