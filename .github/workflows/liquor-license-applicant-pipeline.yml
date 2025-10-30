@@ -114,7 +114,9 @@ jobs:
 
       - name: Run python script 
         working-directory: ./scripts
-        run: python3 extract_entity.py ${{ needs.check-pdf.outputs.pdf-file }}
+        run: |
+          echo "PDF file: ${{ needs.check-pdf.outputs.pdf-file }}" 
+          python3 extract_entity.py ${{ needs.check-pdf.outputs.pdf-file }}
       
       - name: Compile update processed date 
         working-directory: ./scripts
@@ -138,4 +140,5 @@ jobs:
           committer: Github Actions <hello@codeforboston.org>
           author: Github Actions <hello@codeforboston.org>
           add-paths: |
-            data/*.json
+            client/src/data/last_processed_date.json
+            client/src/data/licenses.json
