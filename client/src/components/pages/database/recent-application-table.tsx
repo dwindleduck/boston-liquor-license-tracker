@@ -11,9 +11,9 @@ const statusCellFormatter = (
   // Only format the last column (Status - index 6) in sub-rows
   if (isSubRow && cellIndex === 6) {
     const statusStyles: Record<string, string> = {
-      'Granted': 'bg-accepted text-light rounded-md px-[16px] py-[4px]',
-      'Expired': 'bg-expired text-light rounded-md px-[16px] py-[4px]',
-      'Deffered': 'bg-deferred text-dark rounded-md px-[16px] py-[4px]',
+      'Granted': 'bg-license-accepted-green text-font-light rounded-md px-[16px] py-[4px]',
+      'Expired': 'bg-license-expired-red text-font-light rounded-md px-[16px] py-[4px]',
+      'Deffered': 'bg-license-deferred-yellow text-font-dark rounded-md px-[16px] py-[4px]',
     }
 
     return {

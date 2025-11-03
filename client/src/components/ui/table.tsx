@@ -28,7 +28,7 @@ const StyledRow = ({rowData, subRowData, cellFormatter}: RowWithSubRows & { cell
   return (
     <>
       <Row
-        className="h-[48px] bg-ui hover:bg-ui-hover border-b-[1px] border-border cursor-pointer"
+        className="h-[48px] bg-ui-gray hover:bg-button-hovered-light border-b-[1px] border-border-gray cursor-pointer"
         onAction={() => setSubRowsVisible(prev => !prev)}
       >
         {rowData.map((cell, i) => {
@@ -59,14 +59,14 @@ const StyledRow = ({rowData, subRowData, cellFormatter}: RowWithSubRows & { cell
 
 const StyledSubRow = ({subRowData, cellFormatter}: SubRowProps & { cellFormatter?: CustomTableProps['cellFormatter'] }) => {
   return (
-    <Row className='bg-light border-b-[1px] border-border'>
+    <Row className='bg-background-light border-b-[1px] border-border-gray'>
       {subRowData.map((cell, i) => {
         const formatted = cellFormatter?.(cell, 0, i, true) || { content: cell }
         
         return (
           <Cell
             key={i}
-            className={`py-[12px] text-dark ${i === 0 ? "text-left" : "text-right"} px-[16px] ${i === 0 ? 'pl-[48px]' : ''} `}
+            className={`py-[12px] text-font-dark ${i === 0 ? "text-left" : "text-right"} px-[16px] ${i === 0 ? 'pl-[48px]' : ''} `}
           >
             {formatted.className ? (
               <span className={formatted.className}>{formatted.content}</span>
@@ -83,7 +83,7 @@ const StyledSubRow = ({subRowData, cellFormatter}: SubRowProps & { cellFormatter
 const CustomTable = ({ariaLabel, tableData, headers, cellFormatter}: CustomTableProps) => {
   return (
     <Table aria-label={ariaLabel} className="w-[1400px] table-fixed">
-      <TableHeader className="bg-dark text-light">
+      <TableHeader className="bg-background-dark text-font-light">
         {headers.map((header, i) => (
           <Column 
             key={header} 

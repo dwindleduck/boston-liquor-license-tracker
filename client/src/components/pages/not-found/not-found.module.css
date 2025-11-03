@@ -18,7 +18,7 @@
     text-align: center;
     background: color-mix(
       in srgb,
-      var(--color-dark) 80%,
+      var(--color-background-dark) 80%,
       transparent
     ); /* Semi-transparent overlay for readability */
     border-radius: 8px;
