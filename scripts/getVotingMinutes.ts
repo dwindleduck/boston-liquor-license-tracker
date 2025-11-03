@@ -4,6 +4,8 @@ import axios from 'axios'
 import fs from 'fs/promises';
 import path from 'path'
 import { fileURLToPath } from "url";
+import {LAST_PROCESSED_DATE_JSON, BOSTON_URL} from "./paths.js"
+
 interface EntityType{
    href: string | null, 
    dateText: string, 
@@ -15,10 +17,9 @@ const __dirname = path.dirname(__filename);
 
 async function main(){
    // Entrypoint: fetch the latest meeting date, download the corresponding PDF,
-   // and log structured JSON output for liqour-license-applicant-pipeline workflow.
-  const url = 'https://www.boston.gov/departments/licensing-board/licensing-board-information-and-members'
+   // and log structured JSON output for liqour-license-applicant-pipeline workflow.'
    try{
-      const pdfDate = await getLatestDate(url)
+      const pdfDate = await getLatestDate(BOSTON_URL)
       if(!pdfDate){
         const result = {
            success: true,
@@ -30,7 +31,7 @@ async function main(){
         return
       }
       
-      const fileName = await downloadVotingMinutes(pdfDate, url)
+      const fileName = await downloadVotingMinutes(pdfDate, BOSTON_URL)
       const result = {
          success : true, 
          pdfDate: pdfDate.toISOString(),
@@ -142,14 +143,21 @@ async function getLatestDate(url: string): Promise<Date| null> {
       .text()
       .split("\n")
       .filter((dateString) => !!dateString && dateString.includes("Voting"))
-      .map((dateString) => dateString.replace(/\(Voting\)/g, "").trim());
-
+       .map((dateString) => {
+        // Clean the date string more thoroughly
+        return dateString
+          .replace(/^([A-Za-z]+ \d{1,2}).*$/, "$1") // Keep only "Month DD" at the start
+          .trim();
+      });
+    
     const meetingDates = currentDateStrings.map(
       (dateString) => new Date(`${dateString}, ${currentYear}`)
     );
 
+   
     // Only consider meetings that have already happened
     const pastDates = meetingDates.filter((date) => date <= currentDate)
+
     if (pastDates.length === 0) {
       console.log("No past meeting dates found")
       return null
@@ -157,7 +165,7 @@ async function getLatestDate(url: string): Promise<Date| null> {
     try{
       const lastProcessedDate = await getWrittenLatestDate()
       const unprocessedDates = pastDates.filter((date) => date > lastProcessedDate)
-
+      console.log("unprocessed dates are ",unprocessedDates);
       if (unprocessedDates.length === 0) {
         console.log("No new date found to add entities")
         return null // Return null instead of process.exit(0)
@@ -177,7 +185,7 @@ async function getLatestDate(url: string): Promise<Date| null> {
 }
 
 async function getWrittenLatestDate(){
-  const dateFilePath = path.join(__dirname, '../client/src/data/last_processed_date.json')
+  const dateFilePath = path.join(__dirname, '..', LAST_PROCESSED_DATE_JSON)
   try{
       const data = await fs.readFile(dateFilePath, 'utf-8')
       const parsed = JSON.parse(data)

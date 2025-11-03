@@ -7,6 +7,12 @@ from pathlib import Path
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 from typing import List, Dict, Optional, Any, Union
+from dotenv import load_dotenv
+
+load_dotenv()
+
+LICENSES_JSON = os.getenv("LICENSES_JSON")
+LAST_PROCESSED_DATE_JSON = os.getenv("LAST_PROCESSED_DATE_JSON")
 
 def parse_entity(entity: str) -> Dict[str, Optional[str]]:
     lines: List[str] = [line.strip() for line in entity.splitlines() if line.strip()]
@@ -176,7 +182,7 @@ def write_to_file(result: List[Dict[str, Optional[str]]]) -> None:
     a seeding step and that each entity already contains its own `index`.
     """
     pdf_folder: str = os.getcwd()
-    output_file: str = os.path.join(pdf_folder, "..client/src/data/licenses.json")
+    output_file: str = os.path.join(pdf_folder, "..", LICENSES_JSON)
     existing_data: List[Dict[str, Optional[str]]] = []
 
     if os.path.exists(output_file):
@@ -186,7 +192,7 @@ def write_to_file(result: List[Dict[str, Optional[str]]]) -> None:
                 if content:
                     existing_data = json.loads(content)
         except Exception as e:
-            print(f"Error: Failed to read from json: {e}")
+            raise RuntimeError(f"Failed to read existing data from {output_file}: {e}")
     
 
     if existing_data:
@@ -201,7 +207,7 @@ def write_to_file(result: List[Dict[str, Optional[str]]]) -> None:
         with open(output_file, "w") as f:
             json.dump(existing_data, f, indent=4)
     except Exception as e:
-        print(f"Error: Failed writing data to file: {e}")
+        raise RuntimeError(f"Failed to write data to {output_file}: {e}")
 
 def process_pdf(file_name: str, option: str = "default") -> List[Dict[str, Optional[str]]]:
     pdf_folder: str = os.getcwd()
