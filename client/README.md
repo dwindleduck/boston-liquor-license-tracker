@@ -1,9 +1,10 @@
 # React Client
 ### Contents
-- [Tech Stack](#Tech-Stack)
-- [Project Directory Structure](#Project-Directory-Structure)
-- [Testing](#Testing)
-- [CSS Modules](#Using-CSS-Modules)
+- [Tech Stack](#tech-stack)
+- [Project Directory Structure](#project-directory-structure)
+- [Testing](#testing)
+- [Tailwind Utility Classes](#using-tailwind-utility-classes)
+- [CSS Modules](#using-css-modules)
 
 ## Tech Stack
 
@@ -55,9 +56,14 @@ ComponentName/
 
 Testing is done using [Vitest](https://vitest.dev/). Tests are located in the same directory as the component they test, with a `.test.tsx` suffix.
 
+## Using Tailwind utility classes
+
+Tailwind creates utility classes for each of the colors defined in the @theme block of [our color palette](./src/styles/index.css). We defined `--color-button-default-dark` in the @theme block, so we can now have `bg-button-default-dark` available to use as a class name across the codebase. `bg-` is a common suffix, but see [Tailwind's documentation](https://v3.tailwindcss.com/docs/customizing-colors#using-custom-colors) for other ways to use custom colors.
+
+
 ## Using CSS Modules
 
-We are using Tailwind utility classes to style components, but it will sometimes be necessary to define your own custom css styles. We use CSS modules for this to scope these styles to their respective components.
+We are using [Tailwind utility classes](#using-tailwind-utility-classes) to style components, but it will sometimes be necessary to define your own custom css styles. We use CSS modules for this to scope these styles to their respective components.
 
 Import the css file into the component and use the camelcased names.
 
@@ -75,10 +81,11 @@ const Footer = () => {
 
 ```css
 .footer-test {
-  background-color: #f8f9fa;
+  padding: 10px;
+  text-decoration: none;
 }
 .footer-test:hover {
-  background-color: #009900;
+  text-decoration: underline;
 }
 ```
 

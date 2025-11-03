@@ -4,6 +4,8 @@
 
 /* Single source of truth for hex codes */
 :root {
+  /* Do not use these variables directly */
+  /* Only reference variables from the @theme block below */
   --color-white-1: #fdfdfd;
   --color-gray-dark-1: #2e2e2e;
   --color-gray-light-1: #f2f2f2;
@@ -31,6 +33,11 @@
 }
 
 /* Semantic names for app usage */
+/* Tailwind creates utility classes for each of these variables. We defined `--color-button-default-dark`, so we can now have `bg-button-default-dark` available to use as a class name across the codebase. `bg-` is a common suffix, but for other ways to use custom colors see Tailwind's documentation: https://v3.tailwindcss.com/docs/customizing-colors#using-custom-colors */
+
+/* Colors and associated names for this project are defined in this figma:
+https://www.figma.com/design/JSN042XA3HiNNVEqdFHS01/Liquor-License-Tracker-Mockups?node-id=647-1061&t=NGbbAuEFuN9SRa4K-4 */
+
 @theme {
   --color-background-light: var(--color-white-1);
   --color-background-dark: var(--color-gray-dark-1);
