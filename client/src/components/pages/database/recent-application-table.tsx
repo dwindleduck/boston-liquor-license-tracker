@@ -1,3 +1,4 @@
+import tableStyles from "./license-availability-table.module.css";
 import mockRecentApplicationData from "./mock-recent-application-data";
 import CustomTable, { CellFormat } from "@components/ui/table";
 
@@ -38,7 +39,7 @@ const RecentApplicationTable = () => {
   ]
 
   return (
-    <section className="license-availability-table">
+    <section className={tableStyles.licenseAvailabilityTable}>
       <CustomTable
         ariaLabel="Recent License Applications by Zipcode"
         tableData={mockRecentApplicationData}

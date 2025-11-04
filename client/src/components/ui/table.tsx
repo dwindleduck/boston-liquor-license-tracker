@@ -82,7 +82,7 @@ const StyledSubRow = ({subRowData, cellFormatter}: SubRowProps & { cellFormatter
 
 const CustomTable = ({ariaLabel, tableData, headers, cellFormatter}: CustomTableProps) => {
   return (
-    <Table aria-label={ariaLabel} className="w-[1400px] table-fixed">
+    <Table aria-label={ariaLabel} className="w-[100%] table-fixed">
       <TableHeader className="bg-background-dark text-font-light">
         {headers.map((header, i) => (
           <Column 

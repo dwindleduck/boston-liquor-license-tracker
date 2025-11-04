@@ -1,9 +1,9 @@
-import "./license-type.module.css";
+import styles from  "./license-type.module.css";
 import { FormattedMessage } from "react-intl";
 
 const LicenseType = () => {
   return (
-    <section className="license-type py-[32px] px-[64px] bg-background-light">
+    <section className={styles.licenseType}>
       <h2 className="font-bold text-[36px] m-0">
         <FormattedMessage id="database.licenseTerminology.header" />
       </h2>
