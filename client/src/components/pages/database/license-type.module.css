@@ -1,12 +1,32 @@
 .licenseType {
    background-color: var(--color-background-light);
     padding: 1rem 4rem;
+
+    h2 {
+      font-size: 36px;
+    }
+    h4 {
+      font-size: 24px;
+    }
+    p {
+      font-size: 16px;
+    }
 }
 
 /* 📱 Responsive: Tablet and below */
 @media (max-width: 1024px) {
   .licenseType {
       padding: 1rem 2rem;
+
+    h2 {
+      font-size: 32px;
+    }
+    h4 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 14px;
+    }
   }
 }
 
@@ -14,5 +34,15 @@
 @media (max-width: 600px) {
   .licenseType {
       padding-inline: 1rem;
+    
+    h2 {
+      font-size: 24px;
+    }
+    h4 {
+      font-size: 16px;
+    }
+    p {
+      font-size: 12px;
+    }
   }
 }

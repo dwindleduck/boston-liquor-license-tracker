@@ -13,6 +13,7 @@
 
     .header-text {
         padding-block-end: 2rem;
+        font-size: 16px;
     }
 
     .header-children {
@@ -28,6 +29,10 @@
 @media (max-width: 1024px) {
     .pageheader {
         padding-inline: 2rem;
+
+        .header-title {
+            font-size: 42px;
+        }
     }
 }
 
@@ -35,5 +40,12 @@
 @media (max-width: 600px) {
     .pageheader {
         padding-inline: 1rem;
+
+        .header-title {
+            font-size: 32px;
+        }
+        .header-text {
+            font-size: 12px;
+        }
     }
 }

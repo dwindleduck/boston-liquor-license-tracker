@@ -13,8 +13,8 @@
 }
 
 .heading {
-  font-size: 32px;
-  font-weight: 600;
+  font-size: 36px;
+  font-weight: 700;
   color:var(--color-font-dark);
   margin: 0;
 }
@@ -28,11 +28,11 @@
 /* 📱 Responsive: Tablet and below */
 @media (max-width: 1024px) {
   .heading {
-    font-size: 28px;
+    font-size: 32px;
   }
 
   .description {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .subheader {
@@ -47,7 +47,7 @@
   }
 
   .description {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .subheader {
