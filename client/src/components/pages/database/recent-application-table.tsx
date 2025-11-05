@@ -1,3 +1,4 @@
+import tableStyles from "./license-availability-table.module.css";
 import CustomTable, { CellFormat } from "@components/ui/table";
 import {
   BusinessLicense,
@@ -106,7 +107,7 @@ const RecentApplicationTable = () => {
   }
 
   return (
-    <section className="license-availability-table">
+    <section className={tableStyles.licenseAvailabilityTable}>
       <CustomTable
         ariaLabel="Recent License Applications by Zipcode"
         tableData={formattedData}

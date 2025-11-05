@@ -1,4 +1,4 @@
-import "./database.module.css";
+import styles from "./database.module.css";
 import Header from "./header";
 import SubHeader from "./subheader";
 import LicenseAvailabilityTable from "./license-availability-table";
@@ -10,7 +10,7 @@ const Database = () => {
   const intl = useIntl();
   const title = `${intl.formatMessage({ id: "database.pageTitle" })} | ${intl.formatMessage({ id: "home.pageTitle" })}`;
   return (
-    <main className="database-page">
+    <main className={styles.databasePage}>
       <title>{title}</title>
       <Header />
       <SubHeader />

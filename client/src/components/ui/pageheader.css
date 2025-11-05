@@ -1,24 +1,50 @@
 .pageheader {
     background-color: var(--color-background-dark);
     color: var(--color-font-light);
-    padding-inline: 2rem;
+    padding-inline: 4rem;
 
     .header-title {
-        font-size: 2rem;
-        font-weight: 600;
+        font-size: 48px;
+        font-weight: 700;
         padding-block-start: 1rem;
         padding-block-end: 1rem;
     }
 
     .header-text {
-        padding-block-end: 1rem;
+        padding-block-end: 2rem;
+        font-size: 16px;
     }
 
     .header-children {
-        padding-block-end: 2rem;
+        padding-block-end: 0;
     }
 }
 
 .boxshadow {
     box-shadow: 0px 25px 20px 0px rgba(0, 0, 0, 0.45);
+}
+
+/* 📱 Responsive: Tablet and below */
+@media (max-width: 1024px) {
+    .pageheader {
+        padding-inline: 2rem;
+
+        .header-title {
+            font-size: 42px;
+        }
+    }
+}
+
+/* 📱 Responsive: Mobile */
+@media (max-width: 600px) {
+    .pageheader {
+        padding-inline: 1rem;
+
+        .header-title {
+            font-size: 32px;
+        }
+        .header-text {
+            font-size: 12px;
+        }
+    }
 }

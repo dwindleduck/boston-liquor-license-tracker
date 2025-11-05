@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Table, TableHeader, Column, Row, TableBody, Cell } from 'react-aria-components'
+import styles from "./table.module.css"
 
 export interface RowWithSubRows {
   rowData: [string, ...string[]]
@@ -82,8 +83,8 @@ const StyledSubRow = ({subRowData, cellFormatter}: SubRowProps & { cellFormatter
 
 const CustomTable = ({ariaLabel, tableData, headers, cellFormatter}: CustomTableProps) => {
   return (
-    <Table aria-label={ariaLabel} className="w-[1400px] table-fixed">
-      <TableHeader className="bg-background-dark text-font-light">
+    <Table aria-label={ariaLabel} className={styles.customTable}>
+      <TableHeader className={styles.tableHeader}>
         {headers.map((header, i) => (
           <Column 
             key={header} 
@@ -94,7 +95,7 @@ const CustomTable = ({ariaLabel, tableData, headers, cellFormatter}: CustomTable
           </Column>
         ))}
       </TableHeader>
-      <TableBody>
+      <TableBody className={styles.tableBody}>
         {tableData.map((row) => (
           <StyledRow 
             key={row.rowData[0]}
