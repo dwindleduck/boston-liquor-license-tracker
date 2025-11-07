@@ -67,7 +67,7 @@ const StyledSubRow = ({subRowData, cellFormatter}: SubRowProps & { cellFormatter
         return (
           <Cell
             key={i}
-            className={`py-[12px] text-font-dark ${i === 0 ? "text-left" : "text-right"} px-[16px] ${i === 0 ? 'pl-[48px]' : ''} `}
+            className={`py-[12px] text-font-dark ${i === 0 ? "text-left" : "text-right"} px-[16px] ${i === 0 ? 'pl-[24px] md:pl-[48px]' : ''} `}
           >
             {formatted.className ? (
               <span className={formatted.className}>{formatted.content}</span>
