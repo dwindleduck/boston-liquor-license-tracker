@@ -1,11 +1,9 @@
-import navigationStyles from "./navigation.module.css"
 import NavigationButton from "./navigation-button";
 
 const Navigation = () => {
   return (
     <div 
       className={`
-        ${navigationStyles.navigation}
         navigation
         flex flex-wrap 
         flex-col md:flex-row

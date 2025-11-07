@@ -3,11 +3,11 @@ import { FormattedMessage } from "react-intl";
 
 const AboutUs = () => {
   return (
-    <div className="about-us w-full">
+    <div className="about-us">
       <h1>
         <FormattedMessage id="home.aboutUs.title" />
       </h1>
-      <h2 className="w-full break-words whitespace-normal">
+      <h2>
         <FormattedMessage
           id="home.aboutUs.weAre"
           values={{ 
