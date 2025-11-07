@@ -15,20 +15,8 @@
 }
 
 
-/* 📱 Responsive: Tablet and below */
-@media (max-width: 1024px) {
-    .customTable {
-        .tableHeader {
-            font-size: 14px;
-        }
-        .tableBody {
-            font-size: 14px;
-        }
-    }
-}
-
-/* 📱 Responsive: Mobile */
-@media (max-width: 600px) {
+/* 📱 Mobile Styling */
+@media (max-width: 768px) {
     .customTable {
         .tableHeader {
             font-size: 12px;

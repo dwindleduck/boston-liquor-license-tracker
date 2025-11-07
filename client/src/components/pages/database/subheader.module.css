@@ -24,23 +24,8 @@
   margin: 0;
 }
 
-/* 📱 Responsive: Tablet and below */
-@media (max-width: 1024px) {
-  .heading {
-    font-size: 32px;
-  }
-
-  .description {
-    font-size: 14px;
-  }
-
-  .subheader {
-    padding: 1rem 2rem;
-  }
-}
-
-/* 📱 Responsive: Mobile */
-@media (max-width: 600px) {
+/* 📱 Mobile Styling */
+@media (max-width: 768px) {
   .heading {
     font-size: 24px;
   }
@@ -50,6 +35,6 @@
   }
 
   .subheader {
-    padding: 1rem;
+    padding: 24px;
   }
 }

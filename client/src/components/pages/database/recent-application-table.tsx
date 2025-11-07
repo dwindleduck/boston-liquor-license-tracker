@@ -1,4 +1,4 @@
-import tableStyles from "./license-availability-table.module.css";
+import tableStyles from "./recent-application-table.module.css";
 import CustomTable, { CellFormat } from "@components/ui/table";
 import {
   BusinessLicense,
