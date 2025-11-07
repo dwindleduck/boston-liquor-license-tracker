@@ -60,7 +60,7 @@ const StyledRow = ({rowData, subRowData, cellFormatter}: RowWithSubRows & { cell
 
 const StyledSubRow = ({subRowData, cellFormatter}: SubRowProps & { cellFormatter?: CustomTableProps['cellFormatter'] }) => {
   return (
-    <Row className={`${styles.tableSubRow} bg-background-light border-b-[1px] border-border-gray`}>
+    <Row className={`${styles.tableSubRow} bg-background-light border-[1px] border-border-gray`}>
       {subRowData.map((cell, i) => {
         const formatted = cellFormatter?.(cell, 0, i, true) || { content: cell }
         
@@ -89,7 +89,7 @@ const CustomTable = ({ariaLabel, tableData, headers, cellFormatter}: CustomTable
           <Column 
             key={header} 
             isRowHeader
-            className={`px-[16px] py-[12px] ${i === 0 ? "w-1/5 text-left" : "text-right"}`} 
+            className={`px-[16px] py-[12px] ${i === 0 ? "text-left" : "text-right"}`} 
           >
             {header}
           </Column>

@@ -1,7 +1,7 @@
 .customTable {
     width: 100%;
     table-layout: fixed;
-
+    
     .tableHeader {
         background-color: var(--color-background-dark);
         color: var(--color-font-light);
@@ -28,6 +28,8 @@
 /* 📱 Mobile Styling */
 @media (max-width: 768px) {
     .customTable {
+        width: auto;
+        
         th {
             font-weight: 500;
         }
