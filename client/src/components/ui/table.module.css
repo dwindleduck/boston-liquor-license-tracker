@@ -1,7 +1,6 @@
 .customTable {
     width: 100%;
     table-layout: fixed;
-    
     .tableHeader {
         background-color: var(--color-background-dark);
         color: var(--color-font-light);
