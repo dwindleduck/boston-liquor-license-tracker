@@ -1,4 +1,4 @@
-.about-us {
+.aboutUs {
   line-height: normal;
   background-color: var(--color-background-dark);
   color: var(--color-font-light);
@@ -30,7 +30,7 @@
 
 /* 🌐 Mobile Styling */
 @media (max-width: 768px) {
-  .about-us {
+  .aboutUs {
     padding: 24px;
     gap: 8px;
 
