@@ -6,7 +6,6 @@
     width: 100%;
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
     padding-bottom: 64px;
     padding-top: 32px;
     max-width: 100vw;
@@ -14,7 +13,20 @@
     padding-left: min(32px, 4vw);
     padding-right: min(32px, 4vw);
     box-sizing: border-box;
+
+    .studyIntro {
+      margin-bottom: 32px;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
     h2 {
+      font-size: 16px;
+      line-height: 1.5em;
       color: var(--color-font-light);
       background-color:var(--color-background-dark);
       box-sizing: border-box;
@@ -24,6 +36,7 @@
       box-sizing: border-box;
       flex-shrink: 1;
       max-width: 100%;
+      margin-bottom: 16px;
     }
     .dottedThickBorder {
       border: 10px solid transparent;
@@ -33,5 +46,31 @@
       background-size: 10px 10px, 100% 100%;
       background-origin: border-box, border-box;
       background-clip: border-box, border-box;
+      margin-bottom: 32px;
     }
+}
+
+/* 🌐 Mobile Styling */
+@media (max-width: 768px) {
+  .case-study {
+    padding-bottom: 32px;
+
+    .studyIntro {
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+
+    .dottedThickBorder {
+      margin-bottom: 24px;
+    }
+  }
 }

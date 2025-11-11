@@ -6,15 +6,15 @@ const Hero = () => {
   const intl = useIntl();
   return (
     <div
-      className="hero flex flex-col md:items-start md:justify-start w-full w-full pl-3 pr-3  pb-[70px]  md:pt-[200px] md:pb-[144px] md:pl-[64px] gap-[24px]"
+      className="hero flex flex-col md:items-start md:justify-start w-full pl-6 pt-[48px] pr-3 pb-[48px]  md:pt-[200px] md:pb-[144px] md:pl-[64px] gap-[8px] md:gap-[24px]"
       title={intl.formatMessage({ id: "home.hero.title" })}
     >
       <img
         src={logo}
-        className="w-2xl lg:w-5xl"
+        className="w-3xs md:w-4xl lg:w-5xl"
         alt={intl.formatMessage({ id: "header.logo-altText" })}
       />
-      <h2 className="text-font-light text-2xl md:text-3xl lg:text-5xl w-full font-bold">
+      <h2 className="text-font-light text-sm md:text-3xl lg:text-5xl w-full font-bold">
         <FormattedMessage
           id="home.hero.heading"
           values={{

@@ -14,12 +14,13 @@ const NavigationButton = ({ to, messageId }: NavigationButtonProps) => {
                 justify-center
                 items-center
                 text-center
-                w-[400px] h-[62px]
-                px-[24px] py-[12px]
+                w-full md:w-[400px]
+                min-h-[34px] md:min-h-[62px]
+                px-[24px] py-[8px] md:py-[12px]
                 rounded-[8px]
                 bg-button-default-dark hover:bg-button-hovered-dark active:bg-button-active-dark
                 text-button-default-light hover:text-button-hovered-light active:text-button-active-light
-                text-[32px] font-normal
+                text-[15px] md:text-[32px] font-normal
                 cursor-pointer
             "
       >

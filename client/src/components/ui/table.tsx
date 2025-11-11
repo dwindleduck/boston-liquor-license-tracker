@@ -38,7 +38,7 @@ const StyledRow = ({rowData, subRowData, cellFormatter}: RowWithSubRows & { cell
           return (
             <Cell
               key={i}
-              className={`${i === 0 ? "text-left" : "text-right"} ${cell === '_' ? 'text-transparent' : ''} px-[16px] py-[12px]`}
+              className={`${i === 0 ? "text-left" : "text-right"} ${cell === '_' ? 'text-transparent' : ''}`}
             >
                 <span className={`${formatted.className || ''}`}>{formatted.content}</span>
             </Cell>
@@ -60,14 +60,14 @@ const StyledRow = ({rowData, subRowData, cellFormatter}: RowWithSubRows & { cell
 
 const StyledSubRow = ({subRowData, cellFormatter}: SubRowProps & { cellFormatter?: CustomTableProps['cellFormatter'] }) => {
   return (
-    <Row className='bg-background-light border-b-[1px] border-border-gray'>
+    <Row className={`${styles.tableSubRow} bg-background-light border-[1px] border-border-gray`}>
       {subRowData.map((cell, i) => {
         const formatted = cellFormatter?.(cell, 0, i, true) || { content: cell }
         
         return (
           <Cell
             key={i}
-            className={`py-[12px] text-font-dark ${i === 0 ? "text-left" : "text-right"} px-[16px] ${i === 0 ? 'pl-[48px]' : ''} `}
+            className={`text-font-dark ${i === 0 ? "text-left" : "text-right"}`}
           >
             {formatted.className ? (
               <span className={formatted.className}>{formatted.content}</span>
@@ -89,7 +89,7 @@ const CustomTable = ({ariaLabel, tableData, headers, cellFormatter}: CustomTable
           <Column 
             key={header} 
             isRowHeader
-            className={`px-[16px] py-[12px] ${i === 0 ? "w-1/5 text-left" : "text-right"}`} 
+            className={`px-[16px] py-[12px] ${i === 0 ? "text-left" : "text-right"}`} 
           >
             {header}
           </Column>
