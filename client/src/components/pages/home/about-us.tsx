@@ -1,9 +1,9 @@
-import "./about-us.css";
+import styles from "./about-us.module.css";
 import { FormattedMessage } from "react-intl";
 
 const AboutUs = () => {
   return (
-    <div className="about-us">
+    <div className={`${styles.aboutUs}`}>
       <h1>
         <FormattedMessage id="home.aboutUs.title" />
       </h1>

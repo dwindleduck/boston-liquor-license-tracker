@@ -2,20 +2,21 @@
     background-color: var(--color-background-dark);
     color: var(--color-font-light);
     padding-inline: 4rem;
+    padding-block-end: 2rem;
 
-    .header-title {
+    .headerTitle {
         font-size: 48px;
         font-weight: 700;
         padding-block-start: 1rem;
         padding-block-end: 1rem;
     }
 
-    .header-text {
+    .headerText {
         padding-block-end: 2rem;
         font-size: 16px;
     }
 
-    .header-children {
+    .headerChildren {
         padding-block-end: 0;
     }
 }
@@ -29,13 +30,13 @@
     .pageheader {
         padding-inline: 24px;
 
-        .header-title {
+        .headerTitle {
             font-size: 32px;
             padding-block-start: 32px;
             padding-block-end: 12px;
 
         }
-        .header-text {
+        .headerText {
             font-size: 12px;
             padding-block-end: 24px;
         }

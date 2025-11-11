@@ -1,4 +1,4 @@
-.home-page .quote {
+.quote {
   width: 100%;
   text-align: center;
   padding: 48px 20px;
@@ -18,7 +18,7 @@
 
 /* 🌐 Mobile Styling */
 @media (max-width: 768px) {
-  .home-page .quote {
+  .quote {
     padding: 24px 77px;
 
     h1 {
