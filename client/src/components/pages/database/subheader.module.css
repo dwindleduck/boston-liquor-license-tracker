@@ -23,14 +23,6 @@
 
 /* 📱 Mobile Styling */
 @media (max-width: 768px) {
-  .heading {
-    font-size: 24px;
-  }
-
-  .description {
-    font-size: 12px;
-  }
-
   .subheader {
     padding: 24px;
   }
