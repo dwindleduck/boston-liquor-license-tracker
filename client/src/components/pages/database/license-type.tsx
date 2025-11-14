@@ -10,27 +10,27 @@ const LicenseType = () => {
       <p className="font-normal">
         <FormattedMessage id="database.licenseTerminology.description" />
       </p>
-      <h4 className="font-medium">
+      <h3 className="font-medium">
         <FormattedMessage id="database.licenseTerminology.allAlcohol.title" />
-      </h4>
+      </h3>
       <p className="font-normal">
         <FormattedMessage id="database.licenseTerminology.allAlcohol.description" />
       </p>
-      <h4 className="font-medium">
+      <h3 className="font-medium">
         <FormattedMessage id="database.licenseTerminology.wineAndBeer.title" />
-      </h4>
+      </h3>
       <p className="font-normal">
         <FormattedMessage id="database.licenseTerminology.wineAndBeer.description" />
       </p>
-      <h4 className="font-medium">
+      <h3 className="font-medium">
         <FormattedMessage id="database.licenseTerminology.transferable.title" />
-      </h4>
+      </h3>
       <p className="font-normal">
         <FormattedMessage id="database.licenseTerminology.transferable.description" />
       </p>
-      <h4 className="font-medium">
+      <h3 className="font-medium">
         <FormattedMessage id="database.licenseTerminology.nonTransferable.title" />
-      </h4>
+      </h3>
       <p className="font-normal">
         <FormattedMessage id="database.licenseTerminology.nonTransferable.description" />
       </p>

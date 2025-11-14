@@ -3,14 +3,13 @@
     padding: 1rem 4rem;
 
     h2 {
-      font-size: 36px;
       margin-bottom: 8px;
     }
-    h4 {
-      font-size: 24px;
+    /* { apply these to headings
       margin-top: 8px;
       margin-bottom: 16px;
-    }
+    } */
+     
     p {
       font-size: 16px;
     }
@@ -19,15 +18,11 @@
 /* 📱 Mobile Styling */
 @media (max-width: 768px) {
   .licenseType {
-      padding: 24px;
+    padding: 24px;
     
-    h2 {
-      font-size: 24px;
-    }
-    h4 {
-      font-size: 16px;
+    /*  { apply these to headings
       margin-bottom: 8px;
-    }
+    } */
     p {
       font-size: 12px;
     }

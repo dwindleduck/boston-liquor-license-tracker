@@ -98,6 +98,7 @@ https://www.figma.com/design/JSN042XA3HiNNVEqdFHS01/Liquor-License-Tracker-Mocku
 /********************/
 h1, h2, h3, h4, body, button, nav {
   font-family: 'Roboto', system-ui, sans-serif;
+  line-height: normal;
 }
 
 h1 {
@@ -116,68 +117,12 @@ h4 {
   font-size: 16px;
   font-weight: 500;
 }
-body {
-  font-size: 16px;
-  font-weight: 400;
-}
-button {
-  font-size: 32px;
-  font-weight: 400;
-}
-
-/* button bold... { 
-  font-size: 24px;
-  font-weight: 700;
-} */
-
-/* homepageDisplay {
-  font-size: 32px;
-  font-weight: 700;
-} */
-
-nav { /* same as body */
+body, nav {
   font-size: 16px;
   font-weight: 400;
 }
 
-/* 
-footer {
-  font-size: 16px;
-  font-weight: 400;
-} */
-
-/* footer sections {
-  font-size: 16px;
-  font-weight: 300;
-} */
-
-/* footer discalimer {
-  font-size: 12px;
-  font-weight: 400;
-} */
-
-/* footer discalimer title {
-  font-size: 16px;
-  font-weight: 600;
-} */
-
-/* footer leagal info {
-  font-size: 12px;
-  font-weight: 300;
-} */
-
-/* 404 {
-  font-size: 24px;
-  font-weight: 700;
-} */
-
-/* body italic {
-  font-size: 16px;
-  font-weight: 400;
-} */
-
-
-
+/* Mobile */
 @media (max-width: 768px) {
 
   h1 {
@@ -192,51 +137,7 @@ footer {
   h4 {
     font-size: 12px;
   }
-  body {
+  body, nav {
     font-size: 12px;
   }
-  button {
-    font-size: 15px;
-  }
-
-  /* button bold... { 
-    font-size: 14px;
-  } */
-
-  /* homepageDisplay {
-    font-size: 14px;
-  } */
-
-  nav { /* same as body */
-    /* font-size: 16px;  not in figma*/ 
-  }
-
-  /* 
-  footer {
-    font-size: 12px;
-  } */
-
-  /* footer sections {
-    font-size: 14px;
-  } */
-
-  /* footer discalimer {
-    font-size: 10px;
-  } */
-
-  /* footer discalimer title {
-    font-size: 14px;
-  } */
-
-  /* footer leagal info {
-    font-size: 12px; not in figma
-  } */
-
-  /* 404 {
-    font-size: 16px;
-  } */
-
-  /* body italic {
-    font-size: 12px;
-  } */
 }

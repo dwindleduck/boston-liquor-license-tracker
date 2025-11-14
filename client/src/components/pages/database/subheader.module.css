@@ -12,14 +12,11 @@
 }
 
 .heading {
-  font-size: 36px;
-  font-weight: 700;
   color:var(--color-font-dark);
   margin: 0;
 }
 
 .description {
-  font-size: 16px;
   color:var(--color-font-dark);
   margin: 0;
 }
