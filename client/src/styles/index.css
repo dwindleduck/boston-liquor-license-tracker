@@ -4,8 +4,9 @@
 
 /* This file contains global (site-wide) color definiditions and text styling */
 
-
+/********************/
 /* Color Definitions: Single source of truth for hex codes in our codebase */
+/********************/
 :root {
   /* DO NOT use these variables directly */
   /* Only reference variables from the @theme block below */
@@ -35,8 +36,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/********************/
 /* @theme Semantic Names: use these across the codebase */
-
+/********************/
 /* Tailwind creates utility classes for each of these variables. 
 We defined `--color-background-light`, so we can 
 now have `bg-background-light` available to use 
@@ -91,7 +93,9 @@ https://www.figma.com/design/JSN042XA3HiNNVEqdFHS01/Liquor-License-Tracker-Mocku
 }
 
 
+/********************/
 /* Text styling */
+/********************/
 h1, h2, h3, h4, body, button, nav {
   font-family: 'Roboto', system-ui, sans-serif;
 }
@@ -124,12 +128,6 @@ button {
 /* button bold... { 
   font-size: 24px;
   font-weight: 700;
-} */
-
-/* quote {
-  font-family: Lora;
-  font-size: 36px;
-  font-weight: 500;
 } */
 
 /* homepageDisplay {
@@ -202,10 +200,6 @@ footer {
   }
 
   /* button bold... { 
-    font-size: 14px;
-  } */
-
-  /* quote {
     font-size: 14px;
   } */
 

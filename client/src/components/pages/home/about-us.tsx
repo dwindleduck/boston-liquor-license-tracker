@@ -4,9 +4,9 @@ import { FormattedMessage } from "react-intl";
 const AboutUs = () => {
   return (
     <div className={`${styles.aboutUs}`}>
-      <h1>
+      <h2>
         <FormattedMessage id="home.aboutUs.title" />
-      </h1>
+      </h2>
       <h2>
         <FormattedMessage
           id="home.aboutUs.weAre"
