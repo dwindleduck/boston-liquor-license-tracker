@@ -10,7 +10,7 @@ const NotFound = () => {
     <main className={notFoundStyles.notFound}>
       <title>{title}</title>
       <div className={notFoundStyles.notFoundContent}>
-          <h1 className="w-full">
+        <h1 className="w-full">
           <FormattedMessage id="notFound.heading" />
         </h1>
         <p>
