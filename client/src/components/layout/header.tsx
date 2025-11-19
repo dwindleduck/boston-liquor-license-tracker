@@ -13,20 +13,20 @@ const Spacer = () => <span className="mx-4">&bull;</span>;
 const LineSpacer = () => <div className="w-[160px] h-px bg-background-light" />;
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
-  const [logoClicked, setLogoClicked] = useState(false);
+  const [isOpen, setIsOpen] = useState(false); // Hamburger Menu isOpen
+  const [isHovered, setIsHovered] = useState(false); // Logo isHovered
+  const [logoClicked, setLogoClicked] = useState(false); // Logo Clicked
 
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const handleMouseEnter = () => setIsHovered(true);
-  const handleMouseLeave = () => setIsHovered(false);
-  const handleLogoClick = () => setLogoClicked(true);
+  const toggleMenu = () => setIsOpen(!isOpen); // Hamburger Menu Toggle
+  const handleMouseEnter = () => setIsHovered(true); // Logo Hover
+  const handleMouseLeave = () => setIsHovered(false); // Logo Default
+  const handleLogoClick = () => setLogoClicked(true); // Logo Click
 
   const logoSrc = isHovered
-    ? logoHover
-    : logoClicked
-      ? logoPressed
-      : logoDefault;
+    ? logoHover      // is the logo is hovered? yes - show logoHover
+    : logoClicked    // no? (not hovered)
+      ? logoPressed     // is the logo clicked? yes - show logoPressed
+      : logoDefault;    // no? - show logoDefault
 
   const intl = useIntl();
 
