@@ -14,19 +14,13 @@ const LineSpacer = () => <div className="w-[160px] h-px bg-background-light" />;
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false); // Hamburger Menu isOpen
-  const [isHovered, setIsHovered] = useState(false); // Logo isHovered
-  const [logoClicked, setLogoClicked] = useState(false); // Logo Clicked
+  const [logoSrc, setLogoSrc] = useState(logoDefault); // Logo isHovered
 
   const toggleMenu = () => setIsOpen(!isOpen); // Hamburger Menu Toggle
-  const handleMouseEnter = () => setIsHovered(true); // Logo Hover
-  const handleMouseLeave = () => setIsHovered(false); // Logo Default
-  const handleLogoClick = () => setLogoClicked(true); // Logo Click
-
-  const logoSrc = isHovered
-    ? logoHover      // is the logo is hovered? yes - show logoHover
-    : logoClicked    // no? (not hovered)
-      ? logoPressed     // is the logo clicked? yes - show logoPressed
-      : logoDefault;    // no? - show logoDefault
+  const handleMouseEnter = () => setLogoSrc(logoHover) // Logo Hover
+  const handleMouseLeave = () => setLogoSrc(logoDefault); // Logo Default
+  const handleMouseDown = () => setLogoSrc(logoPressed) // Logo Click
+  const handleMouseUp = () => setLogoSrc(logoHover) // Logo Click Release
 
   const intl = useIntl();
 
@@ -38,7 +32,8 @@ const Header = () => {
         <Link
           to="/"
           className="text-xl font-bold"
-          onClick={handleLogoClick}
+          onMouseDown={handleMouseDown}
+          onMouseUp={handleMouseUp}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
