@@ -63,7 +63,7 @@ const Header = () => {
             <FormattedMessage id="shared.resources.capitalized" />
           </Link>
 
-          <div className="absolute right-6 top-1/2 -translate-y-1/2 flex items-center">
+          <div className="flex ml-auto pl-1 items-center">
             <img
               src={language}
               className={"inline-block size-[20px] text-font-light"}
@@ -95,7 +95,7 @@ const Header = () => {
           <Link to="/resources" className="py-[8px] block">
             <FormattedMessage id="shared.resources.capitalized" />
           </Link>
-          <div className="py-[16px] pb-[8px] ms-auto">
+          <div className="pt-[16px] ms-auto">
             <img
               src={language}
               className={"inline-block size-[20px] text-font-light me-2"}

@@ -5,7 +5,7 @@
 
   .logoImage {
     max-height: 32px;
-    max-width: 257px;
+    max-width: 230px;
   }
 
   a:hover {
@@ -16,7 +16,12 @@
 /* 🌐 Mobile Styling */
 @media (max-width: 768px) {
   .siteHeader {
-    padding: 24px;
+    padding: 18px 24px;
+    
+    .logoImage {
+      max-height: 20px;
+      max-width: 160px;
+    }
   }
 
 }
