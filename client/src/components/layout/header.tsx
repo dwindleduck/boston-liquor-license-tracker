@@ -28,14 +28,14 @@ const Header = () => {
     <header
       className={`${styles.siteHeader} bg-button-default-dark shadow-md sticky top-0 left-0 w-full z-50`}
     >
-      <nav className="flex w-full items-center">
+      <section className="flex">
         <Link
           to="/"
-          className="text-xl font-bold"
           onMouseDown={handleMouseDown}
           onMouseUp={handleMouseUp}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
+          className="flex items-center"
         >
           <img
             className={styles.logoImage}
@@ -44,7 +44,8 @@ const Header = () => {
           />
         </Link>
 
-        <nav className="hidden md:flex items-center w-full">
+        {/* Non-mobile Nav & Language Switcher */}
+        <nav className="hidden md:flex items-center text-center w-full">
           <Spacer />
           <Link to="/maps">
             <FormattedMessage id="shared.map.capitalized" />
@@ -58,7 +59,7 @@ const Header = () => {
             <FormattedMessage id="shared.resources.capitalized" />
           </Link>
 
-          <div className="flex ml-auto pl-1 items-center">
+          <div className="flex ml-auto pl-1 mr-5 items-center">
             <img
               src={language}
               className={"inline-block size-[20px] text-font-light"}
@@ -68,15 +69,15 @@ const Header = () => {
           </div>
         </nav>
 
-        <div className="flex md:hidden ml-auto">
-          <button onClick={toggleMenu} aria-label="Toggle menu">
-            <span className="justify-end material-icons">
-              {isOpen ? "close" : "menu"}
-            </span>
-          </button>
-        </div>
-      </nav>
+        {/* Hamburger Toggle */}
+        <button className="flex md:hidden ml-auto" onClick={toggleMenu} aria-label="Toggle menu">
+          <span className="justify-end material-icons">
+            {isOpen ? "close" : "menu"}
+          </span>
+        </button>
+      </section>
 
+      {/* Mobile Nav & Language Switcher*/}
       {isOpen && (
         <nav className="md:hidden bg-background-dark mt-4">
           <Link to="/maps" className="py-[8px] block">
