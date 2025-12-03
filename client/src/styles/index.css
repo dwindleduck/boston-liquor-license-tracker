@@ -90,6 +90,10 @@ https://www.figma.com/design/JSN042XA3HiNNVEqdFHS01/Liquor-License-Tracker-Mocku
   --color-license-accepted-green: var(--color-green-1);
   --color-license-expired-red: var(--color-red-4);
   --color-license-deferred-yellow: var(--color-yellow-4);
+
+  /* Map */
+  --color-map-red: var(--color-red-1);
+  
 }
 
 
