@@ -51,6 +51,11 @@ https://v3.tailwindcss.com/docs/customizing-colors#using-custom-colors */
 /* Colors and associated names for this project are defined in this figma:
 https://www.figma.com/design/JSN042XA3HiNNVEqdFHS01/Liquor-License-Tracker-Mockups?node-id=647-1061&t=NGbbAuEFuN9SRa4K-4 */
 
+/* If you don't find an appropriate semantic name below,
+one may need to be created. 
+For example, as the Maps page is built, 
+colors will be named as they are used */
+
 @theme {
   /* Base UI */
   --color-background-light: var(--color-white-1);
