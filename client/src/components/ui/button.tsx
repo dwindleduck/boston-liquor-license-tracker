@@ -13,7 +13,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-background-dark hover:bg-button-hovered-dark active:bg-button-active-dark text-font-light hover:text-font-text-links-hover active:text-font-text-links-active rounded-[8px] cursor-pointer w-[200px] text-[18px] font-medium",
+          "bg-background-dark hover:bg-button-hovered-dark active:bg-button-active-dark text-font-light hover:text-font-links-hover active:text-font-links-active rounded-[8px] cursor-pointer w-[200px] text-[18px] font-medium",
         // We have not implemented button variants yet, these are suggested from shadcn:
         // destructive:
         //   "",

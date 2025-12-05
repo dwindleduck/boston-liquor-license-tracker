@@ -79,8 +79,8 @@ colors will be named as they are used */
   /* Text */
   --color-font-light: var(--color-white-1);
   --color-font-dark: var(--color-gray-dark-3);
-  --color-font-text-links-hover: var(--color-gray-light-3);
-  --color-font-text-links-active: var(--color-gray-light-4);
+  --color-font-links-hover: var(--color-gray-light-3);
+  --color-font-links-active: var(--color-gray-light-4);
 
   /* Buttons */
   --color-button-default-light: var(--color-white-1);
@@ -91,7 +91,7 @@ colors will be named as they are used */
   --color-button-hovered-dark: var(--color-gray-dark-2);
   --color-button-active-dark: var(--color-gray-dark-1);
 
-  /* Logo */
+  /* Logo */  /* None of these are in use yet */
   --color-logo-default-red: var(--color-red-1);
   --color-logo-hovered-red: var(--color-red-2);
   --color-logo-active-red: var(--color-red-4);
