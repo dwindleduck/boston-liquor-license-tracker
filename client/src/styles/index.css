@@ -70,7 +70,7 @@ one may need to be created.
 For example, as the Maps page is built, 
 colors will be named as they are used */
 
-@theme { /* Use thses */
+@theme { /* Use these */
   /* Base UI */
   --color-background-light: var(--color-white-1);
   --color-background-dark: var(--color-gray-dark-3);
