@@ -7,7 +7,6 @@ export interface ExtraWork {
   title: string;
   imgSrc: string;
   href: string;
-  colorTheme: "light" | "dark";
   alt: string;
 }
 
@@ -17,7 +16,6 @@ export const extraWorkData: ExtraWork[] = [
     title: "OFFSITE Hospitality",
     imgSrc: offsiteLogo,
     href: "https://www.getoffsite.com/",
-    colorTheme: "dark",
     alt: "home.extraWork.altTest.offsite",
   },
   {
@@ -25,7 +23,6 @@ export const extraWorkData: ExtraWork[] = [
     title: "Bar Management Bootcamp",
     imgSrc: bootcampImg,
     href: "https://www.getoffsite.com/bootcamp",
-    colorTheme: "dark",
     alt: "home.extraWork.altText.barManagementBootcamp",
   },
   {
@@ -33,7 +30,6 @@ export const extraWorkData: ExtraWork[] = [
     title: "Code for Boston",
     imgSrc: cfbLogo,
     href: "https://www.codeforboston.org/",
-    colorTheme: "light",
     alt: "home.extraWork.altText.codeForBoston",
   },
 ];

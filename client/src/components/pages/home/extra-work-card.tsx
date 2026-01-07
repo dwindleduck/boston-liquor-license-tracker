@@ -12,7 +12,7 @@ const ExtraWorkCard = ({ item }: ExtraWorkCardProps) => {
     <a
       href={item.href}
       target="_blank"
-      style={{ backgroundImage: `url(${item.imgSrc})` }}
+      style={{ backgroundImage: `${item.name === "bootcamp" ? "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))," : ""} url(${item.imgSrc})` }}
       title={intl.formatMessage({ id: item.alt })}
       className={`
         ${styles[item.name]}
@@ -43,14 +43,6 @@ const ExtraWorkCard = ({ item }: ExtraWorkCardProps) => {
         md:text-[32px]
         text-shadow-lg
         font-medium
-
-        ${item.colorTheme === "light" ? 
-          // Light theme
-          "bg-background-light text-font-dark" 
-          : 
-          // Dark theme
-          "bg-background-dark text-font-light"
-        }
       `}
     >
       {item.title}
