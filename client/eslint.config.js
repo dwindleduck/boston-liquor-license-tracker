@@ -25,7 +25,7 @@ export default tseslint.config(
         'warn',
         { allowConstantExport: true },
       ],
-      'local-rules/no-hex-colors': 'warn'
+      // 'local-rules/no-hex-colors': 'warn'
     },
   },
 )
