@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   'no-hex-colors': {
     meta: {
       type: 'problem',
