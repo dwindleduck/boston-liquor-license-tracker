@@ -17,7 +17,7 @@ export default tseslint.config(
     plugins: {
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
-      // 'local-rules': eslintLocalRules,
+      'local-rules': eslintLocalRules,
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
@@ -25,7 +25,12 @@ export default tseslint.config(
         'warn',
         { allowConstantExport: true },
       ],
-      // 'local-rules/no-hex-colors': 'warn'
+      'local-rules/no-hex-colors': 'warn'
+    },
+    settings: {
+      'local-rules': {
+        'local-rules': path.join(__dirname, 'eslint-local-rules.js')
+      }
     },
   },
 )
