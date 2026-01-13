@@ -11,7 +11,7 @@ const ExtraWorkCard = ({ item }: ExtraWorkCardProps) => {
       href={item.href}
       target="_blank"
       style={{ backgroundImage: `${item.name === "bootcamp" ? "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))," : ""} url(${item.imgSrc})` }}
-      title={intl.formatMessage({ id: item.title })}
+      title={item.title}
       className={`
         ${styles.extraWorkCard}
         ${styles[item.name]}
