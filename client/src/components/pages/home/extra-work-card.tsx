@@ -15,34 +15,12 @@ const ExtraWorkCard = ({ item }: ExtraWorkCardProps) => {
       style={{ backgroundImage: `${item.name === "bootcamp" ? "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))," : ""} url(${item.imgSrc})` }}
       title={intl.formatMessage({ id: item.alt })}
       className={`
+        ${styles.extraWorkCard}
         ${styles[item.name]}
-        flex
-        relative
-        items-end
-        shrink-0
-        w-full
-        size-full
-        md:size-[320px]
-        min-h-[96px]
-
-        py-[12px] px-[16px] md:py-[16px]
-        
-        rounded-[8px]
-        
-        bg-cover
-        bg-center
-        bg-no-repeat
-        
-        cursor-pointer
-        
+        text-shadow-lg
         focus-visible:border-border-gray
         focus-visible:ring-border-gray
         focus-visible:ring-[8px]
-
-        text-[14px]
-        md:text-[32px]
-        text-shadow-lg
-        font-medium
       `}
     >
       {item.title}
