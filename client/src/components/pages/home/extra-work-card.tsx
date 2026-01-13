@@ -1,5 +1,4 @@
 import { ExtraWork } from "@/data/extra-work-data";
-import { useIntl } from "react-intl";
 import styles from "./extra-work-card.module.css";
 
 interface ExtraWorkCardProps {
