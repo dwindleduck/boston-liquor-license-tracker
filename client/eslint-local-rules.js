@@ -1,4 +1,4 @@
-module.exports = {
+const eslinstLocalRules = {
   rules:{
     'no-hex-colors': {
       meta: {
@@ -47,3 +47,5 @@ module.exports = {
     }
   }
 };
+
+export default eslinstLocalRules;
