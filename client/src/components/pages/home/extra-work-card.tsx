@@ -6,7 +6,6 @@ interface ExtraWorkCardProps {
 }
 
 const ExtraWorkCard = ({ item }: ExtraWorkCardProps) => {
-  const intl = useIntl();
   return (
     <a
       href={item.href}
