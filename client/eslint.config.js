@@ -4,6 +4,7 @@ import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 import eslintLocalRules from './eslint-local-rules.js'
 import tseslint from 'typescript-eslint'
+import path from 'path'
 
 export default tseslint.config(
   { ignores: ['dist'] },
