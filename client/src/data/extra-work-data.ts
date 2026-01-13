@@ -7,7 +7,6 @@ export interface ExtraWork {
   title: string;
   imgSrc: string;
   href: string;
-  alt: string;
 }
 
 export const extraWorkData: ExtraWork[] = [
@@ -16,20 +15,17 @@ export const extraWorkData: ExtraWork[] = [
     title: "OFFSITE Hospitality",
     imgSrc: offsiteLogo,
     href: "https://www.getoffsite.com/",
-    alt: "home.extraWork.altTest.offsite",
   },
   {
     name: "bootcamp",
     title: "Bar Management Bootcamp",
     imgSrc: bootcampImg,
     href: "https://www.getoffsite.com/bootcamp",
-    alt: "home.extraWork.altText.barManagementBootcamp",
   },
   {
     name: "cfb",
     title: "Code for Boston",
     imgSrc: cfbLogo,
     href: "https://www.codeforboston.org/",
-    alt: "home.extraWork.altText.codeForBoston",
   },
 ];
