@@ -76,6 +76,7 @@ async function downloadVotingMinutes(pdfDate : Date, url: string) : Promise<stri
     }
 
     let entity = {} as EntityType
+    console.log("pdf date is", pdfDate)
     $(votingMinuteSection).find("ul li a").each((_, e) => {
         const dateText = $(e).text()
         const match = dateText.match(regex)
