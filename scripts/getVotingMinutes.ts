@@ -76,8 +76,9 @@ async function downloadVotingMinutes(pdfDate : Date, url: string) : Promise<stri
     }
 
     let entity = {} as EntityType
-    console.log("pdf date is", pdfDate)
-    console.log(votingMinuteSection.html())
+    // NOTE: Updated selector from `ul li a` to `a[href*=".pdf"]` because the webpage
+    // DOM structure changed and no longer uses list-based markup. Selecting by `href`
+    // makes the scraper resilient to layout changes and focuses on the actual document links.
     $(votingMinuteSection).find(`a[href$=".pdf"]`).each((_, e) => {
         const dateText = $(e).text()
         console.log("date text is ", dateText)
