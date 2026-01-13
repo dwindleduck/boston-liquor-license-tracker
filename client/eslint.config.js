@@ -28,10 +28,5 @@ export default tseslint.config(
       ],
       'local-rules/no-hex-colors': 'warn'
     },
-    settings: {
-      'local-rules': {
-        'local-rules': path.join(__dirname, 'eslint-local-rules.js')
-      }
-    },
   },
 )
