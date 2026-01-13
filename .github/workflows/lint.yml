@@ -3,7 +3,7 @@ name: Lint comments
 on: [pull_request]
 
 permissions:
-  contents: read
+  contents: write
   pull-requests: write
 
 jobs:
