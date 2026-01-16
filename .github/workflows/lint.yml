@@ -29,7 +29,7 @@ jobs:
           # See the following for filter options:
           # https://github.com/reviewdog/reviewdog?tab=readme-ov-file#filter-mode
           filter_mode: 'added'
-  
+
   stylelint:
     name: Lint with Stylelint
     runs-on: ubuntu-latest
