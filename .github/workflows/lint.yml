@@ -29,3 +29,27 @@ jobs:
           # See the following for filter options:
           # https://github.com/reviewdog/reviewdog?tab=readme-ov-file#filter-mode
           filter_mode: 'added'
+
+  stylelint:
+    name: Lint with Stylelint
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          # Checkout the PR code, not the base branch
+          ref: ${{ github.event.pull_request.head.sha }}
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '20'
+      - run: npm ci
+        working-directory: ./client
+      - uses: reviewdog/action-stylelint@v1
+        with:
+          workdir: ./client
+          stylelint_input: '**/*.css'
+          reporter: github-pr-review
+          filter_mode: 'nofilter'
+          # TODO: change this back to 'added'
