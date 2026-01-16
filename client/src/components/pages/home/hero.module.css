@@ -4,6 +4,7 @@
     url("../../../assets/images/hero-backdrop.jpg") lightgray
       0px -613.65px / 100% 408.885% no-repeat;
 
+  background-color: #000000; /* test of linter */
   background-position: center;
   background-size: cover;
   color: var(--color-font-light);
