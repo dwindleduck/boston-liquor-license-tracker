@@ -11,7 +11,7 @@ const Hero = () => {
     >
       <img
         src={logo}
-        className="w-3xs md:w-4xl lg:w-5xl bg-[#000000] "
+        className="w-3xs md:w-4xl lg:w-5xl"
         alt={intl.formatMessage({ id: "header.logo-altText" })}
       />
       <h2 className={styles.homepageDisplay}>
