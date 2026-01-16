@@ -51,4 +51,5 @@ jobs:
           workdir: ./client
           stylelint_input: '**/*.css'
           reporter: github-pr-review
-          filter_mode: 'added'
+          filter_mode: 'nofilter'
+          # TODO: change this back to 'added'
