@@ -1,6 +1,11 @@
 export default {
   rules: {
-    'color-no-hex': null
+    'color-no-hex': [
+      true,
+      {
+        message: `Hex color codes are only allowed in client/src/styles/index.css. Use Tailwind classes or CSS variables instead. See client/README.md#using-tailwind-utility-classes`
+      }
+    ]
   },
   overrides: [
     {
