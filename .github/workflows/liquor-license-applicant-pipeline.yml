@@ -79,9 +79,9 @@ jobs:
         if: steps.check.outputs.pdf-found == 'true'
         with:
           name: voting-pdf 
-          path: ./scripts/${{ steps.check.outputs.pdf-file }}
+          path: ./client/data/voting-minutes/${{ steps.check.outputs.pdf-file }}
           if-no-files-found: error
-          retention-days: 2
+          retention-days:  0 # Keep indefinitely
     
   
   process-pdf:
