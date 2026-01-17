@@ -120,7 +120,7 @@ jobs:
         uses: actions/download-artifact@v5
         with: 
           name: voting-pdf 
-          path: ./scripts
+          path: ./client/src/data/voting-minutes/
 
       - name: Run python script 
         working-directory: ./scripts
