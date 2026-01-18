@@ -154,3 +154,4 @@ jobs:
           add-paths: |
             client/src/data/last_processed_date.json
             client/src/data/licenses.json
+            client/src/data/voting-minutes/${{ needs.check-pdf.outputs.pdf-file }}
