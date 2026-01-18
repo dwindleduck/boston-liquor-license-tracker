@@ -81,7 +81,7 @@ jobs:
           name: voting-pdf 
           path: ./scripts/${{ steps.check.outputs.pdf-file }}
           if-no-files-found: error
-          retention-days:  2
+          retention-days: 2
     
   
   process-pdf:
