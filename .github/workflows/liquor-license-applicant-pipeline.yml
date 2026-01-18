@@ -79,9 +79,9 @@ jobs:
         if: steps.check.outputs.pdf-found == 'true'
         with:
           name: voting-pdf 
-          path: ./client/src/data/voting-minutes/${{ steps.check.outputs.pdf-file }}
+          path: ./scripts/${{ steps.check.outputs.pdf-file }}
           if-no-files-found: error
-          retention-days:  0 # Keep indefinitely
+          retention-days:  2
     
   
   process-pdf:
@@ -116,17 +116,19 @@ jobs:
         working-directory: ./scripts
         run: npm ci 
       
+        # needs.check-pdf.outputs.pdf-file is just the filename,
+        # so we need to download the artifact
       - name: Download voting pdf
         uses: actions/download-artifact@v5
         with: 
           name: voting-pdf 
-          path: ./client/src/data/voting-minutes/
+          path: ./scripts
 
       - name: Run python script 
         working-directory: ./scripts
         run: |
           echo "PDF file: ${{ needs.check-pdf.outputs.pdf-file }}" 
-          python3 extract_entity.py "../client/src/data/voting-minutes/${{ needs.check-pdf.outputs.pdf-file }}"
+          python3 extract_entity.py "${{ needs.check-pdf.outputs.pdf-file }}"
       
       - name: Compile update processed date 
         working-directory: ./scripts
