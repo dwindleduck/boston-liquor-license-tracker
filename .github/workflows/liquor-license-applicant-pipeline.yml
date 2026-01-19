@@ -34,7 +34,6 @@ jobs:
         with:
           repository: ${{ inputs.target-repository }}
           ref: ${{ inputs.target-ref }}
-          lfs: true
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
