@@ -37,7 +37,7 @@ See [Client Page](https://github.com/codeforboston/boston-liquor-license-tracker
 
 ## Install Git Large File Storage
 
-Our repo uses Git LFS for managing large files.
+Our repo uses Git LFS for managing large files. GitHub Actions workflows will automatically be able to utilize git-lfs, but contributors will need to install and initialize git-lfs on their local system.
 
 - First install locally (with Homebrew, or see the [official documentation](https://docs.github.com/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage))
 ```bash 
