@@ -48,7 +48,7 @@ brew install git-lfs
 git lfs install
 ```
 
-## Running the React client:
+## Running the React client: 
 
 ```bash
 cd client
