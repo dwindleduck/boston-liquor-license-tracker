@@ -142,8 +142,8 @@ jobs:
         # Move pdf to long-term storage for the PR
       - name: Move PDF to data directory
         run: |
-          mkdir -p ./client/src/data/voting-minutes
-          mv ./scripts/${{ needs.check-pdf.outputs.pdf-file }} ./client/src/data/voting-minutes/
+          mkdir -p ./data/voting-minutes
+          mv ./scripts/${{ needs.check-pdf.outputs.pdf-file }} ./data/voting-minutes/
 
       - name: Create pull request to merge in new next meeting date
         uses: peter-evans/create-pull-request@v7
@@ -161,4 +161,4 @@ jobs:
           add-paths: |
             client/src/data/last_processed_date.json
             client/src/data/licenses.json
-            client/src/data/voting-minutes/${{ needs.check-pdf.outputs.pdf-file }}
+            data/voting-minutes/${{ needs.check-pdf.outputs.pdf-file }}
