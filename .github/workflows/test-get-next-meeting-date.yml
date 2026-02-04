@@ -1,0 +1,11 @@
+name: TEST - Get Next Meeting Date workflow
+
+on:
+ workflow_dispatch:
+
+jobs:
+  test-run:
+    uses: ./.github/workflows/get-next-meeting-date.yml
+    with:
+      target-repository: "${{ github.repository_owner }}/boston-liquor-license-tracker"
+      target-ref: ${{ github.ref_name }}
