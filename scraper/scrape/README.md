@@ -86,14 +86,14 @@ The application is designed to be run as a single module. This triggers the enti
 source .venv/bin/activate
 
 # Using uv
-uv run python -m app.main --download_dir ./my_pdfs
+uv run python -m app.main --download_dir ./data/voting_minutes_pdfs
 
 # OR using standard python (with venv activated)
-python -m app.main --download_dir ./my_pdfs
+python -m app.main --download_dir ./data/voting_minutes_pdfs
 ```
 
 ### Command Line Arguments
-- `--download_dir`: (Optional) Specify a custom directory for downloaded PDFs. Defaults to `voting_minutes_pdfs/`.
+- `--download_dir`: (Optional) Specify a custom directory for downloaded PDFs. Defaults to `data/voting_minutes_pdfs/`.
 
 If you have `make` installed, you can also use the following commands:
 
@@ -114,5 +114,5 @@ make lint
 * `data/hearing_video_links.json`: Collection of extracted YouTube/video links.
 * `data/voting_minutes_links.json`: Collection of voting minute PDF links. (With common date format parsed from href & body)
 * `data/link_stats_log.csv`: Historical record of scraping statistics.
-* `voting_minutes_pdfs/`: The downloaded PDF files. (Detects duplicates, versions files when content differs, and skips identical files.)
+* `data/voting_minutes_pdfs/`: The downloaded PDF files. (Detects duplicates, versions files when content differs, and skips identical files.)
 
