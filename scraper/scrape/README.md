@@ -54,9 +54,10 @@ graph TD
 
 ### Quick Start (macOS /Linux)
 
-We have provided a convenience script to set up the environment automatically. It uses `uv` to manage the virtual environment and dependencies.
+Run this executable script to set up the environment automatically, or follow the manual setup steps next. This uses `uv` to manage the virtual environment and dependencies.
 
 ```bash
+cd scraper/scrape
 ./dev_setup.sh
 ```
 
