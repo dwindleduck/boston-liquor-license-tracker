@@ -51,7 +51,7 @@ jobs:
           committer: Github Actions <hello@codeforboston.org>
           author: Github Actions <hello@codeforboston.org>
           add-paths: |
-            ${{ env.SCRAPER_DIR }}/${{ env.DFS_DIR }}/*.pdf
+            ${{ env.SCRAPER_DIR }}/${{ env.PDFS_DIR }}/*.pdf
             ${{ env.SCRAPER_DIR }}/data/url_exclude_list.json
             ${{ env.SCRAPER_DIR }}/data/link_stats_log.csv
             ${{ env.SCRAPER_DIR }}/data/hearing_video_links.json
