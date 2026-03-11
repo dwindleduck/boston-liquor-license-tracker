@@ -24,8 +24,11 @@ STOP_MARKERS = [
     "Non-Hearing Common Transactions",
     "Non-Hearing Transactions",
     "Non-Hearing Transactional:",
+    "Non-Hearing Transactional Items",
     "Non-Hearing Transactional Items:",
     "The following are applying for a new Common Victualler License",
+    "The following are applying for a C.V. license at a previously licensed location",
+    "The following is applying for a New Common Victualler License at a previously",
     "***FORCE STOP***",
 ]
 
@@ -48,6 +51,7 @@ class HearingTextExtractorStep:
                 proceed=False, reason="PDF file path not provided in KVStore"
             )
         pdf_lines = pdf_text.splitlines()
+        
         hearings = self._extract_section(pdf_lines)
         if hearings:
             self.kv_store.set(const.HEARING_SECTION, hearings)

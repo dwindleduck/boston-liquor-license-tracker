@@ -9,5 +9,7 @@ LICENSE_JSON_DATA = "license_json_data"
 
 # Paths
 BASE_DIR = Path(__file__).resolve().parent.parent
-DATA_DIR = BASE_DIR / "data"
+DATA_DIR = BASE_DIR / "../data"
 LOG_DIR = BASE_DIR / "log"
+
+BASE_PDF_URL = "https://raw.githubusercontent.com/DanHUMassMed/Licensing-Board-Minutes/main/data/voting_minutes_pdfs/"

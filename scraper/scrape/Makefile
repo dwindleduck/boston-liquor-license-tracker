@@ -18,4 +18,8 @@ lint: check-venv
 	$(MYPY) app/
 
 run: check-venv
-	$(PYTHON) -m app.main --download_dir ./data/voting_minutes_pdfs
+	$(PYTHON) -m app.cli
+
+run-txt: check-venv
+	$(PYTHON) -m app.cli --txt-dir ../data/voting_minutes_txt
+

@@ -17,7 +17,10 @@ class CategoryExtractor:
                 line_lower = (
                     line.lower().replace("-", " ").replace("_", " ").replace("&", "and")
                 )
-                if any(
+ 
+                if any(kw in line_lower for kw in ["malt", "malts", "wine", "wines"]):
+                    ctx.data["alcohol_type"] = "wines and malt beverages"
+                elif any(
                     kw in line_lower
                     for kw in [
                         "all alcoholic",
@@ -27,8 +30,5 @@ class CategoryExtractor:
                     ]
                 ):
                     ctx.data["alcohol_type"] = "all alcoholic beverages"
-                elif any(kw in line_lower for kw in ["malt", "malts", "wine", "wines"]):
-                    ctx.data["alcohol_type"] = "wines and malt beverages"
-
                 ctx.anchors["category_idx"] = idx
                 return

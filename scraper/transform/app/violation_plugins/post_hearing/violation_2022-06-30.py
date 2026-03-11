@@ -17,8 +17,8 @@ class Violation_2022_06_30(Plugin):
     def run(self, store):
         hearing_section = store.get(const.HEARING_SECTION)
         fixed = hearing_section.replace(
-            "Doing business as: McCormick & Schmicks Seafood Restaurant 300 Faneuil Hall Marketplace",
-            "Doing business as: McCormick & Schmicks Seafood Restaurant\n300 Faneuil Hall Marketplace",
+            "Doing business as: McCormick & Schmick's Seafood Restaurant 300 Faneuil Hall Marketplace",
+            "Doing business as: McCormick & Schmick's Seafood Restaurant\n300 Faneuil Hall Marketplace",
         )
 
         store.set(const.HEARING_SECTION, fixed)
