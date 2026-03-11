@@ -53,15 +53,30 @@ def run_pipeline(pdf_file_path: str, kv_store: KVStore | None = None):
     store = kv_store or KVStore()
     store.set(const.PDF_FILE_PATH, pdf_file_path)
 
+    # These steps are run for each PDF in the store
     pipeline = Pipeline(
         store,
         [
+            # Extracts all text from the downloaded PDF
             PDFTextExtractorStep(store),
+
+            # Runs fixes from ../violation_plugins/post_text/ on the extracted PDF text
             InvariantPluginStep(store, "POST_TEXT"),
+            
+            # Extracts hearings from the PDF text
             HearingTextExtractorStep(store),
+
+            # Runs fixes from ../violation_plugins/post_hearing/ after hearing text extraction
             InvariantPluginStep(store, "POST_HEARING"),
+            
+            # Extracts license-related text from the hearing text
             LicenseTextExtractorStep(store),
-            InvariantPluginStep(store, "POST_LICENSE"),
+            
+            # Runs fixes from ../violation_plugins/post_license/ after license text extraction
+            # TODO: uncomment this line when post_license plugins are implemented
+            # InvariantPluginStep(store, "POST_LICENSE"),
+            
+            # Extracts structured JSON data from the hearing and license text and stores it in the KVStore.
             TextJsonExtractorStep(store),
         ],
     )
