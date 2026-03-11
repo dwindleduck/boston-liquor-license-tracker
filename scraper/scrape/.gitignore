@@ -8,6 +8,8 @@
 
 log.txt
 
+app.log
+
 *.pyc
 
 __pycache__/
