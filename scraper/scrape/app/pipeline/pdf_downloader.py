@@ -1,37 +1,40 @@
 import logging
-from io import BytesIO
-from urllib.parse import urljoin
-from pathlib import Path
 import shutil
+from io import BytesIO
+from pathlib import Path
+from urllib.parse import urljoin
+
 import pikepdf
 import requests
 
 from app import constants as const
 from app.link_filters.exclude_list_filter import ExcludeListFilter
-from app.storage.json_store import JsonStore
+from app.storage.kv_store import KVStore
 from app.storage.pdf_store import PdfStore
+from app.storage.run_result import RunResult
 
 logger = logging.getLogger(__name__)
 
 
-class DownloaderService:
-    """Orchestrates the downloading of voting minute PDFs."""
+class DownloaderStep:
+    """
+    Downloads voting minute PDFs from the links in KVStore.
+    """
 
-    def __init__(self, download_dir: Path | str | None = None):
-        self.storage = JsonStore()
-        self.download_dir = Path(download_dir) if download_dir else const.DOWNLOAD_DIR
-        self.pdf_repo = PdfStore(self.download_dir)
-        # We use the exclude filter here primarily to ADD bad URLs
-        self.exclude_filter = ExcludeListFilter(const.URL_EXCLUDE_LIST_FILE)
+    def __init__(
+        self, kv_store: KVStore, pdf_store: PdfStore, exclude_filter: ExcludeListFilter
+    ):
+        self.kv_store = kv_store
+        self.pdf_store = pdf_store
+        self.exclude_filter = exclude_filter
 
-    def run(self):
-        logger.info("Starting download process...")
-        links = self.storage.load(const.MINUTES_LINKS_FILE)
-
+    def run(self) -> RunResult:
+        links = self.kv_store.get("minutes_links", [])
         if not links:
-            logger.warning(f"No links found in {const.MINUTES_LINKS_FILE}")
-            return
+            logger.warning("No links found for downloading.")
+            return RunResult(proceed=True)
 
+        logger.info("Starting download process...")
         for item in links:
             href = item.get("href")
             date_str = item.get("date")
@@ -45,11 +48,10 @@ class DownloaderService:
 
             content = self._download_pdf(href)
             if content:
-                self.pdf_repo.save_pdf(content, date_str)
+                self.pdf_store.save_pdf(content, date_str)
 
-        self._copy_exception_pdfs(const.EXCEPTION_PDFS, self.download_dir)
-    
-        logger.info("Download process completed.")
+        self._copy_exception_pdfs(const.EXCEPTION_PDFS, self.pdf_store.download_dir)
+        return RunResult(proceed=True)
 
     def _download_pdf(self, href: str) -> bytes | None:
         url = self._prepare_url(href)
@@ -82,26 +84,19 @@ class DownloaderService:
         except pikepdf.PdfError:
             return False
 
-
-    def _copy_exception_pdfs(self, source_dir: str, destination_dir: str) -> int:
-        """
-        Copy all *.pdf files from source_dir to destination_dir.
-
-        Args:
-            source_dir (str): Directory containing PDF files to copy
-            destination_dir (str): Directory to copy PDFs into
-
-        Returns:
-            int: Number of PDF files copied
-        """
+    def _copy_exception_pdfs(
+        self,
+        source_dir: str | Path,
+        destination_dir: str | Path,
+    ) -> int:
         src = Path(source_dir)
         dst = Path(destination_dir)
 
         if not src.exists() or not src.is_dir():
-            raise ValueError(f"Source directory does not exist or is not a directory: {src}")
+            logger.warning(f"Source directory for exception PDFs does not exist: {src}")
+            return 0
 
         dst.mkdir(parents=True, exist_ok=True)
-
         pdf_files = list(src.glob("*.pdf"))
 
         for pdf in pdf_files:

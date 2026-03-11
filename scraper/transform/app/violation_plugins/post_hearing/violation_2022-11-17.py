@@ -1,4 +1,4 @@
-# This module targets the June 30, 2022 hearing section and fixes
+# This module targets the November 17, 2022 hearing section and fixes
 # the address for the license application by adding a newline.
 
 from app import constants as const
@@ -16,9 +16,10 @@ class Violation_2022_11_17(Plugin):
 
     def run(self, store):
         hearing_section = store.get(const.HEARING_SECTION)
+
         fixed = hearing_section.replace(
-            "Doing business as: Del Friscos Double Eagle Steakhouse 888 Boylston St., Boston, MA 02199",
-            "Doing business as: Del Friscos Double Eagle Steakhouse\n888 Boylston St., Boston, MA 02199",
+            "Del Frisco's Double Eagle Steakhouse 888 Boylston St., Boston, MA 02199",
+            "Del Frisco's Double Eagle Steakhouse\n888 Boylston St., Boston, MA 02199",
         )
 
         store.set(const.HEARING_SECTION, fixed)

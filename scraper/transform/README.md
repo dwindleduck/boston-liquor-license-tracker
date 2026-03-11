@@ -102,21 +102,21 @@ The project uses a dedicated CLI in `app/cli.py` for both batch processing and s
 **Batch Process Directory:**
 
 ```bash
-uv run python -m app.cli --dir ../scrape/data/voting_minutes_pdfs --output all_licenses.json
+uv run python -m app.cli --dir voting_minutes_pdfs --output all_licenses.json
 ```
 
 **Debug Single File:**
 Processing a single file automatically triggers a full `KVStore` diagnostic dump, helping you identify why a specific document might be failing.
 
 ```bash
-uv run python -m app.cli --file ../scrape/data/voting_minutes_pdfs/specific_file.pdf
+uv run python -m app.cli --file voting_minutes_pdfs/specific_file.pdf
 ```
 
 **Using Makefile:**
 
 ```bash
 # Run the whole directory
-# Assumes --dir ../scrape/data/voting_minutes_pdfs
+# Assumes --dir ../scrape/voting_minutes_pdfs
 make run
 
 # Run a single file

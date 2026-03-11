@@ -13,7 +13,6 @@ def main():
     parser = argparse.ArgumentParser(
         description="Boston Licensing Board PDF to JSON Pipeline"
     )
-    # Accept --file OR --dir arguments, but not both
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("--file", help="Path to a single PDF file to process")
     group.add_argument(
@@ -30,7 +29,6 @@ def main():
 
     all_results = []
 
-    # if the user provided a single file, process it directly
     if args.file:
         logging.getLogger().setLevel(logging.DEBUG)
         logger.info(f"Processing single file: {args.file}")
@@ -42,7 +40,6 @@ def main():
         logger.debug(f"Results: {results}")
         logger.debug(f"All results: {store.dump()}")
 
-    # otherwise, process all PDF files in the provided directory
     elif args.dir:
         if not os.path.exists(args.dir):
             logger.error(f"Directory not found: {args.dir}")
